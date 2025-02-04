@@ -759,3 +759,2396 @@ drop view if exists "dev"."public"."my_second_dbt_model__dbt_backup" cascade
 [0m00:01:33.696628 [debug] [MainThread]: Command `dbt run` succeeded at 00:01:33.696446 after 30.34 seconds
 [0m00:01:33.697516 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7b55130460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7b4e02b970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7b4c6aa7c0>]}
 [0m00:01:33.698804 [debug] [MainThread]: Flushing usage events
+[0m00:33:08.198110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65522d23d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f654f9e9d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6551e16e80>]}
+
+
+============================== 00:33:08.201792 | 7e4f66e8-ff6c-46d5-9a59-323411d3ea38 ==============================
+[0m00:33:08.201792 [info ] [MainThread]: Running with dbt=1.8.7
+[0m00:33:08.202895 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/usr/app/analytics_dbt/analytics_edz_dbt/logs', 'profiles_dir': '/root/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m00:33:08.301700 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m00:33:08.302650 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m00:33:08.451595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7e4f66e8-ff6c-46d5-9a59-323411d3ea38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f654f97d1c0>]}
+[0m00:33:08.491769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7e4f66e8-ff6c-46d5-9a59-323411d3ea38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f654d9a69a0>]}
+[0m00:33:08.494782 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m00:33:08.516411 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m00:33:08.617119 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m00:33:08.618414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7e4f66e8-ff6c-46d5-9a59-323411d3ea38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65505becd0>]}
+[0m00:33:10.027868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7e4f66e8-ff6c-46d5-9a59-323411d3ea38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f653fbfdee0>]}
+[0m00:33:10.209353 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7e4f66e8-ff6c-46d5-9a59-323411d3ea38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f653fb4f460>]}
+[0m00:33:10.211160 [info ] [MainThread]: Found 5 models, 4 data tests, 489 macros
+[0m00:33:10.211992 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7e4f66e8-ff6c-46d5-9a59-323411d3ea38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6550faa460>]}
+[0m00:33:10.214651 [info ] [MainThread]: 
+[0m00:33:10.216222 [debug] [MainThread]: Acquiring new redshift connection 'master'
+[0m00:33:10.221360 [debug] [ThreadPool]: Acquiring new redshift connection 'list_dev'
+[0m00:33:10.241327 [debug] [ThreadPool]: Using redshift connection "list_dev"
+[0m00:33:10.242537 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "connection_name": "list_dev"} */
+
+    select distinct nspname from pg_namespace
+[0m00:33:10.243535 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:33:10.248490 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:33:10.250635 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:33:11.865188 [debug] [ThreadPool]: SQL status: SUCCESS in 1.621 seconds
+[0m00:33:11.868220 [debug] [ThreadPool]: On list_dev: Close
+[0m00:33:11.871383 [debug] [ThreadPool]: Acquiring new redshift connection 'list_dev_public'
+[0m00:33:11.880555 [debug] [ThreadPool]: Using redshift connection "list_dev_public"
+[0m00:33:11.882036 [debug] [ThreadPool]: On list_dev_public: BEGIN
+[0m00:33:11.882961 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:33:11.884129 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:33:11.885065 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:33:13.432857 [debug] [ThreadPool]: SQL status: SUCCESS in 1.550 seconds
+[0m00:33:13.434528 [debug] [ThreadPool]: Using redshift connection "list_dev_public"
+[0m00:33:13.436197 [debug] [ThreadPool]: On list_dev_public: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "connection_name": "list_dev_public"} */
+select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema,
+        'table' as type
+    from information_schema.tables
+    where table_schema ilike 'public'
+    and table_type = 'BASE TABLE'
+    union all
+    select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case
+        when view_definition ilike '%create materialized view%'
+          then 'materialized_view'
+        else 'view'
+      end as type
+    from information_schema.views
+    where table_schema ilike 'public'
+[0m00:33:13.749342 [debug] [ThreadPool]: SQL status: SUCCESS in 0.312 seconds
+[0m00:33:13.753438 [debug] [ThreadPool]: On list_dev_public: ROLLBACK
+[0m00:33:14.030382 [debug] [ThreadPool]: On list_dev_public: Close
+[0m00:33:14.044170 [debug] [MainThread]: Using redshift connection "master"
+[0m00:33:14.045594 [debug] [MainThread]: On master: BEGIN
+[0m00:33:14.046937 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:33:14.048162 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:33:14.049139 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:33:15.544730 [debug] [MainThread]: SQL status: SUCCESS in 1.498 seconds
+[0m00:33:15.546214 [debug] [MainThread]: Using redshift connection "master"
+[0m00:33:15.547452 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "connection_name": "master"} */
+with
+    relation as (
+        select
+            pg_class.oid as relation_id,
+            pg_class.relname as relation_name,
+            pg_class.relnamespace as schema_id,
+            pg_namespace.nspname as schema_name,
+            pg_class.relkind as relation_type
+        from pg_class
+        join pg_namespace
+          on pg_class.relnamespace = pg_namespace.oid
+        where pg_namespace.nspname != 'information_schema'
+          and pg_namespace.nspname not like 'pg\_%'
+    ),
+    dependency as (
+        select distinct
+            coalesce(pg_rewrite.ev_class, pg_depend.objid) as dep_relation_id,
+            pg_depend.refobjid as ref_relation_id,
+            pg_depend.refclassid as ref_class_id
+        from pg_depend
+        left join pg_rewrite
+          on pg_depend.objid = pg_rewrite.oid
+        where coalesce(pg_rewrite.ev_class, pg_depend.objid) != pg_depend.refobjid
+    )
+
+select distinct
+    dep.schema_name as dependent_schema,
+    dep.relation_name as dependent_name,
+    ref.schema_name as referenced_schema,
+    ref.relation_name as referenced_name
+from dependency
+join relation ref
+    on dependency.ref_relation_id = ref.relation_id
+join relation dep
+    on dependency.dep_relation_id = dep.relation_id
+[0m00:33:15.887044 [debug] [MainThread]: SQL status: SUCCESS in 0.339 seconds
+[0m00:33:15.891502 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7e4f66e8-ff6c-46d5-9a59-323411d3ea38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f654f2a43d0>]}
+[0m00:33:15.892929 [debug] [MainThread]: On master: ROLLBACK
+[0m00:33:16.184597 [debug] [MainThread]: Using redshift connection "master"
+[0m00:33:16.185641 [debug] [MainThread]: On master: BEGIN
+[0m00:33:16.330925 [debug] [MainThread]: SQL status: SUCCESS in 0.144 seconds
+[0m00:33:16.332432 [debug] [MainThread]: On master: COMMIT
+[0m00:33:16.333462 [debug] [MainThread]: Using redshift connection "master"
+[0m00:33:16.334191 [debug] [MainThread]: On master: COMMIT
+[0m00:33:16.612660 [debug] [MainThread]: SQL status: SUCCESS in 0.277 seconds
+[0m00:33:16.614030 [debug] [MainThread]: On master: Close
+[0m00:33:16.615661 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m00:33:16.616729 [info ] [MainThread]: 
+[0m00:33:16.623230 [debug] [Thread-1  ]: Began running node model.analytics_dbt.my_first_dbt_model
+[0m00:33:16.624300 [info ] [Thread-1  ]: 1 of 5 START sql table model public.my_first_dbt_model ......................... [RUN]
+[0m00:33:16.625381 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_dev_public, now model.analytics_dbt.my_first_dbt_model)
+[0m00:33:16.626469 [debug] [Thread-1  ]: Began compiling node model.analytics_dbt.my_first_dbt_model
+[0m00:33:16.630593 [debug] [Thread-1  ]: Writing injected SQL for node "model.analytics_dbt.my_first_dbt_model"
+[0m00:33:16.647629 [debug] [Thread-1  ]: Began executing node model.analytics_dbt.my_first_dbt_model
+[0m00:33:16.694212 [debug] [Thread-1  ]: Writing runtime sql for node "model.analytics_dbt.my_first_dbt_model"
+[0m00:33:16.715497 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:33:16.716947 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: BEGIN
+[0m00:33:16.718515 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:33:16.719585 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:33:16.720510 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:33:18.298859 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.580 seconds
+[0m00:33:18.299872 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:33:18.300626 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_first_dbt_model"} */
+
+  
+    
+
+  create  table
+    "dev"."public"."my_first_dbt_model__dbt_tmp"
+    
+    
+    
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+[0m00:33:18.686741 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.385 seconds
+[0m00:33:18.694528 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:33:18.695613 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_first_dbt_model"} */
+alter table "dev"."public"."my_first_dbt_model" rename to "my_first_dbt_model__dbt_backup"
+[0m00:33:19.281243 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.585 seconds
+[0m00:33:19.286201 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:33:19.287417 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_first_dbt_model"} */
+alter table "dev"."public"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m00:33:19.740620 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.451 seconds
+[0m00:33:19.761652 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: COMMIT
+[0m00:33:19.762956 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:33:19.764427 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: COMMIT
+[0m00:33:20.440496 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.675 seconds
+[0m00:33:20.441871 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:33:20.442758 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: BEGIN
+[0m00:33:20.878174 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.434 seconds
+[0m00:33:20.892198 [debug] [Thread-1  ]: Applying DROP to: "dev"."public"."my_first_dbt_model__dbt_backup"
+[0m00:33:20.898406 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:33:20.899823 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_first_dbt_model"} */
+drop table if exists "dev"."public"."my_first_dbt_model__dbt_backup" cascade
+[0m00:33:21.391533 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.491 seconds
+[0m00:33:21.393229 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: COMMIT
+[0m00:33:21.394370 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:33:21.395328 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: COMMIT
+[0m00:33:22.186911 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.790 seconds
+[0m00:33:22.188491 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:33:22.189600 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: BEGIN
+[0m00:33:22.468460 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.278 seconds
+[0m00:33:22.471780 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: ROLLBACK
+[0m00:33:22.865572 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: Close
+[0m00:33:22.868037 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7e4f66e8-ff6c-46d5-9a59-323411d3ea38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f653f1815e0>]}
+[0m00:33:22.869279 [info ] [Thread-1  ]: 1 of 5 OK created sql table model public.my_first_dbt_model .................... [[32mSUCCESS[0m in 6.24s]
+[0m00:33:22.870525 [debug] [Thread-1  ]: Finished running node model.analytics_dbt.my_first_dbt_model
+[0m00:33:22.871580 [debug] [Thread-1  ]: Began running node model.analytics_dbt.vw_sales
+[0m00:33:22.872547 [info ] [Thread-1  ]: 2 of 5 START sql view model public.vw_sales .................................... [RUN]
+[0m00:33:22.873483 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.analytics_dbt.my_first_dbt_model, now model.analytics_dbt.vw_sales)
+[0m00:33:22.874556 [debug] [Thread-1  ]: Began compiling node model.analytics_dbt.vw_sales
+[0m00:33:22.877685 [debug] [Thread-1  ]: Writing injected SQL for node "model.analytics_dbt.vw_sales"
+[0m00:33:22.892785 [debug] [Thread-1  ]: Began executing node model.analytics_dbt.vw_sales
+[0m00:33:22.923192 [debug] [Thread-1  ]: Writing runtime sql for node "model.analytics_dbt.vw_sales"
+[0m00:33:22.945402 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:33:22.946399 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: BEGIN
+[0m00:33:22.947237 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:33:22.948319 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:33:22.949483 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:33:26.184266 [debug] [Thread-1  ]: SQL status: SUCCESS in 2.838 seconds
+[0m00:33:26.185907 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:33:26.187061 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.vw_sales"} */
+
+
+  create view "dev"."public"."vw_sales__dbt_tmp" as (
+    with source_sales as (
+    select *
+    from sales
+
+),
+
+renamed as (
+    select
+        SALESID AS ID_VENDA,
+        LISTID AS ID_LISTA,
+        SELLERID AS ID_VENDEDOR,
+        BUYERID AS ID_COMPRADOR,
+        EVENTID AS ID_EVENTO,
+        DATEID AS ID_DATE,
+        QTYSOLD AS QUANTIDADE_VENDIDA,
+        PRICEPAID AS VALOR_PAGO,
+        COMMISSION AS COMISSAO,
+        TO_CHAR(saletime, 'dd/mm/yyyy HH24:MI:SS') AS DATA_HORA_VENDA,
+        TO_CHAR(saletime, 'HH24:MI:SS') AS HORA_VENDA,
+        cast(saletime as date) AS DATA_VENDA
+
+  
+    FROM source_sales
+
+)
+
+select * from renamed
+  ) ;
+[0m00:33:27.312738 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.581 seconds
+[0m00:33:27.318739 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:33:27.319608 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.vw_sales"} */
+alter table "dev"."public"."vw_sales" rename to "vw_sales__dbt_backup"
+[0m00:33:28.155705 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.835 seconds
+[0m00:33:28.160643 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:33:28.161665 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.vw_sales"} */
+alter table "dev"."public"."vw_sales__dbt_tmp" rename to "vw_sales"
+[0m00:33:28.593319 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.430 seconds
+[0m00:33:28.597747 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: COMMIT
+[0m00:33:28.599172 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:33:28.600410 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: COMMIT
+[0m00:33:29.310973 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.709 seconds
+[0m00:33:29.313007 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:33:29.314081 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: BEGIN
+[0m00:33:29.590807 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.276 seconds
+[0m00:33:29.594194 [debug] [Thread-1  ]: Applying DROP to: "dev"."public"."vw_sales__dbt_backup"
+[0m00:33:29.597201 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:33:29.598137 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.vw_sales"} */
+drop view if exists "dev"."public"."vw_sales__dbt_backup" cascade
+[0m00:33:29.891582 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.292 seconds
+[0m00:33:29.893502 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: COMMIT
+[0m00:33:29.894655 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:33:29.895432 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: COMMIT
+[0m00:33:30.440539 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.544 seconds
+[0m00:33:30.441622 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:33:30.442700 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: BEGIN
+[0m00:33:30.615846 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.172 seconds
+[0m00:33:30.619504 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: ROLLBACK
+[0m00:33:30.918565 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: Close
+[0m00:33:30.920780 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7e4f66e8-ff6c-46d5-9a59-323411d3ea38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65522c4b20>]}
+[0m00:33:30.922384 [info ] [Thread-1  ]: 2 of 5 OK created sql view model public.vw_sales ............................... [[32mSUCCESS[0m in 8.05s]
+[0m00:33:30.923485 [debug] [Thread-1  ]: Finished running node model.analytics_dbt.vw_sales
+[0m00:33:30.924856 [debug] [Thread-1  ]: Began running node model.analytics_dbt.my_second_dbt_model
+[0m00:33:30.926258 [info ] [Thread-1  ]: 3 of 5 START sql view model public.my_second_dbt_model ......................... [RUN]
+[0m00:33:30.927357 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.analytics_dbt.vw_sales, now model.analytics_dbt.my_second_dbt_model)
+[0m00:33:30.928442 [debug] [Thread-1  ]: Began compiling node model.analytics_dbt.my_second_dbt_model
+[0m00:33:30.932834 [debug] [Thread-1  ]: Writing injected SQL for node "model.analytics_dbt.my_second_dbt_model"
+[0m00:33:30.951616 [debug] [Thread-1  ]: Began executing node model.analytics_dbt.my_second_dbt_model
+[0m00:33:30.956931 [debug] [Thread-1  ]: Writing runtime sql for node "model.analytics_dbt.my_second_dbt_model"
+[0m00:33:30.979379 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m00:33:30.980693 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: BEGIN
+[0m00:33:30.982758 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:33:30.984386 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:33:30.985431 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:33:32.569085 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.586 seconds
+[0m00:33:32.570482 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m00:33:32.571600 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_second_dbt_model"} */
+
+
+  create view "dev"."public"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "dev"."public"."my_first_dbt_model"
+where id = 1
+  ) ;
+[0m00:33:33.206669 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.634 seconds
+[0m00:33:33.213420 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m00:33:33.214810 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_second_dbt_model"} */
+alter table "dev"."public"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m00:33:33.639173 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.423 seconds
+[0m00:33:33.642465 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: COMMIT
+[0m00:33:33.644273 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m00:33:33.646039 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: COMMIT
+[0m00:33:34.269379 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.622 seconds
+[0m00:33:34.271717 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m00:33:34.273197 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: BEGIN
+[0m00:33:34.580059 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.305 seconds
+[0m00:33:34.629835 [debug] [Thread-1  ]: Applying DROP to: "dev"."public"."my_second_dbt_model__dbt_backup"
+[0m00:33:34.631651 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m00:33:34.632849 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_second_dbt_model"} */
+drop view if exists "dev"."public"."my_second_dbt_model__dbt_backup" cascade
+[0m00:33:34.930132 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.296 seconds
+[0m00:33:34.932615 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: COMMIT
+[0m00:33:34.933918 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m00:33:34.934830 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: COMMIT
+[0m00:33:35.092713 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.157 seconds
+[0m00:33:35.094653 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m00:33:35.095910 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: BEGIN
+[0m00:33:35.249838 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.153 seconds
+[0m00:33:35.252413 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: ROLLBACK
+[0m00:33:35.547878 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: Close
+[0m00:33:35.550375 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7e4f66e8-ff6c-46d5-9a59-323411d3ea38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f653d7deca0>]}
+[0m00:33:35.552438 [info ] [Thread-1  ]: 3 of 5 OK created sql view model public.my_second_dbt_model .................... [[32mSUCCESS[0m in 4.62s]
+[0m00:33:35.554351 [debug] [Thread-1  ]: Finished running node model.analytics_dbt.my_second_dbt_model
+[0m00:33:35.555466 [debug] [Thread-1  ]: Began running node model.analytics_dbt.tb_10_compradores
+[0m00:33:35.556711 [info ] [Thread-1  ]: 4 of 5 START sql table model public.tb_10_compradores .......................... [RUN]
+[0m00:33:35.557773 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.analytics_dbt.my_second_dbt_model, now model.analytics_dbt.tb_10_compradores)
+[0m00:33:35.558534 [debug] [Thread-1  ]: Began compiling node model.analytics_dbt.tb_10_compradores
+[0m00:33:35.561831 [debug] [Thread-1  ]: Writing injected SQL for node "model.analytics_dbt.tb_10_compradores"
+[0m00:33:35.583647 [debug] [Thread-1  ]: Began executing node model.analytics_dbt.tb_10_compradores
+[0m00:33:35.590371 [debug] [Thread-1  ]: Writing runtime sql for node "model.analytics_dbt.tb_10_compradores"
+[0m00:33:35.621018 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m00:33:35.622283 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: BEGIN
+[0m00:33:35.623209 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:33:35.624259 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:33:35.625306 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:33:37.173842 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.550 seconds
+[0m00:33:37.175743 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m00:33:37.177507 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_10_compradores"} */
+
+  
+    
+
+  create  table
+    "dev"."public"."tb_10_compradores__dbt_tmp"
+    
+    
+    
+  as (
+    with sales as (
+
+    select * from "dev"."public"."vw_sales"
+
+),
+compradores as (
+
+    SELECT
+        (firstname ||' '|| lastname) as Nome_Completo, userid
+    FROM users
+),
+
+top_10_compradores as (
+
+    SELECT
+        compradores.Nome_Completo as Nome_Completo,
+        sum(sales.quantidade_vendida) as Vendas_totais,
+        sales.comissao as Comissao
+    FROM sales INNER JOIN compradores
+    ON sales.id_comprador = compradores.userid
+    GROUP BY compradores.userid, compradores.Nome_Completo, sales.comissao
+    ORDER BY Vendas_totais DESC
+    LIMIT 10
+
+)
+
+select * from top_10_compradores
+  );
+[0m00:33:52.514884 [debug] [Thread-1  ]: SQL status: SUCCESS in 15.336 seconds
+[0m00:33:52.520247 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m00:33:52.521884 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_10_compradores"} */
+alter table "dev"."public"."tb_10_compradores__dbt_tmp" rename to "tb_10_compradores"
+[0m00:33:53.411067 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.888 seconds
+[0m00:33:53.414269 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: COMMIT
+[0m00:33:53.416839 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m00:33:53.418745 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: COMMIT
+[0m00:33:54.303344 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.883 seconds
+[0m00:33:54.305350 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m00:33:54.306991 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: BEGIN
+[0m00:33:54.702341 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.394 seconds
+[0m00:33:54.706677 [debug] [Thread-1  ]: Applying DROP to: "dev"."public"."tb_10_compradores__dbt_backup"
+[0m00:33:54.709171 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m00:33:54.710584 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_10_compradores"} */
+drop table if exists "dev"."public"."tb_10_compradores__dbt_backup" cascade
+[0m00:33:55.111858 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.400 seconds
+[0m00:33:55.114061 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: COMMIT
+[0m00:33:55.115205 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m00:33:55.116032 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: COMMIT
+[0m00:33:55.397250 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.280 seconds
+[0m00:33:55.399118 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m00:33:55.400566 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: BEGIN
+[0m00:33:55.596395 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.194 seconds
+[0m00:33:55.599353 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: ROLLBACK
+[0m00:33:56.106050 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: Close
+[0m00:33:56.108958 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7e4f66e8-ff6c-46d5-9a59-323411d3ea38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f653e94c730>]}
+[0m00:33:56.111444 [info ] [Thread-1  ]: 4 of 5 OK created sql table model public.tb_10_compradores ..................... [[32mSUCCESS[0m in 20.55s]
+[0m00:33:56.112776 [debug] [Thread-1  ]: Finished running node model.analytics_dbt.tb_10_compradores
+[0m00:33:56.113715 [debug] [Thread-1  ]: Began running node model.analytics_dbt.tb_vendas_primeiro_trimestre
+[0m00:33:56.114845 [info ] [Thread-1  ]: 5 of 5 START sql table model public.tb_vendas_primeiro_trimestre ............... [RUN]
+[0m00:33:56.116314 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.analytics_dbt.tb_10_compradores, now model.analytics_dbt.tb_vendas_primeiro_trimestre)
+[0m00:33:56.117841 [debug] [Thread-1  ]: Began compiling node model.analytics_dbt.tb_vendas_primeiro_trimestre
+[0m00:33:56.122864 [debug] [Thread-1  ]: Writing injected SQL for node "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:33:56.137749 [debug] [Thread-1  ]: Began executing node model.analytics_dbt.tb_vendas_primeiro_trimestre
+[0m00:33:56.146471 [debug] [Thread-1  ]: Writing runtime sql for node "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:33:56.171759 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:33:56.173133 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: BEGIN
+[0m00:33:56.174197 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:33:56.175434 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:33:56.176327 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:33:59.382076 [debug] [Thread-1  ]: SQL status: SUCCESS in 2.343 seconds
+[0m00:33:59.383311 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:33:59.384476 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_vendas_primeiro_trimestre"} */
+
+  
+    
+
+  create  table
+    "dev"."public"."tb_vendas_primeiro_trimestre__dbt_tmp"
+    
+    
+    
+  as (
+    -- define o as variáveis meses e ano
+
+
+
+-- cria a fonte com os dados de date e converte o  nome das colunas
+with source_date as (
+    select  dateid as id_date,
+            month as mes,
+            year as ano
+    from date
+
+),
+-- cria uma fonte de dados unindo a tabela sales com date
+sales_date as (
+
+    select  source_date.mes, 
+            sum(quantidade_vendida)
+    from  "dev"."public"."vw_sales" sales inner join source_date
+    on sales.id_date = source_date.id_date
+    where source_date.mes in ('JAN', 'FEB', 'MAR')
+    and source_date.ano = '2008'
+    group by source_date.mes
+)
+select * from sales_date
+  );
+[0m00:34:09.885679 [debug] [Thread-1  ]: SQL status: SUCCESS in 10.500 seconds
+[0m00:34:09.890722 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:34:09.891609 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_vendas_primeiro_trimestre"} */
+alter table "dev"."public"."tb_vendas_primeiro_trimestre__dbt_tmp" rename to "tb_vendas_primeiro_trimestre"
+[0m00:34:10.482460 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.590 seconds
+[0m00:34:10.485508 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: COMMIT
+[0m00:34:10.486734 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:34:10.487609 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: COMMIT
+[0m00:34:11.140502 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.652 seconds
+[0m00:34:11.142346 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:34:11.143363 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: BEGIN
+[0m00:34:11.760011 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.615 seconds
+[0m00:34:11.764049 [debug] [Thread-1  ]: Applying DROP to: "dev"."public"."tb_vendas_primeiro_trimestre__dbt_backup"
+[0m00:34:11.765288 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:34:11.766052 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_vendas_primeiro_trimestre"} */
+drop table if exists "dev"."public"."tb_vendas_primeiro_trimestre__dbt_backup" cascade
+[0m00:34:12.108982 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.342 seconds
+[0m00:34:12.111324 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: COMMIT
+[0m00:34:12.112413 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:34:12.113216 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: COMMIT
+[0m00:34:12.556141 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.442 seconds
+[0m00:34:12.558546 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:34:12.559961 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: BEGIN
+[0m00:34:12.764280 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.203 seconds
+[0m00:34:12.766002 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: ROLLBACK
+[0m00:34:13.250105 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: Close
+[0m00:34:13.252425 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7e4f66e8-ff6c-46d5-9a59-323411d3ea38', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f654d93eac0>]}
+[0m00:34:13.254174 [info ] [Thread-1  ]: 5 of 5 OK created sql table model public.tb_vendas_primeiro_trimestre .......... [[32mSUCCESS[0m in 17.14s]
+[0m00:34:13.255431 [debug] [Thread-1  ]: Finished running node model.analytics_dbt.tb_vendas_primeiro_trimestre
+[0m00:34:13.258365 [debug] [MainThread]: Using redshift connection "master"
+[0m00:34:13.259340 [debug] [MainThread]: On master: BEGIN
+[0m00:34:13.260093 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:34:13.261004 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:34:13.262098 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:34:16.425004 [debug] [MainThread]: SQL status: SUCCESS in 3.165 seconds
+[0m00:34:16.427018 [debug] [MainThread]: On master: COMMIT
+[0m00:34:16.429044 [debug] [MainThread]: Using redshift connection "master"
+[0m00:34:16.430422 [debug] [MainThread]: On master: COMMIT
+[0m00:34:16.834615 [debug] [MainThread]: SQL status: SUCCESS in 0.403 seconds
+[0m00:34:16.836044 [debug] [MainThread]: On master: Close
+[0m00:34:16.837806 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:34:16.838881 [debug] [MainThread]: Connection 'list_dev' was properly closed.
+[0m00:34:16.839651 [debug] [MainThread]: Connection 'model.analytics_dbt.tb_vendas_primeiro_trimestre' was properly closed.
+[0m00:34:16.840580 [info ] [MainThread]: 
+[0m00:34:16.841714 [info ] [MainThread]: Finished running 3 table models, 2 view models in 0 hours 1 minutes and 6.62 seconds (66.62s).
+[0m00:34:16.844820 [debug] [MainThread]: Command end result
+[0m00:34:16.936115 [info ] [MainThread]: 
+[0m00:34:16.937151 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:34:16.937957 [info ] [MainThread]: 
+[0m00:34:16.939794 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m00:34:16.944336 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 67.05407, "process_user_time": 3.278103, "process_kernel_time": 0.20222, "process_mem_max_rss": "117008", "process_in_blocks": "76632", "process_out_blocks": "0"}
+[0m00:34:16.945595 [debug] [MainThread]: Command `dbt run` succeeded at 00:34:16.945302 after 67.06 seconds
+[0m00:34:16.947086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f65522d23d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f654fd09dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f654d9d7b50>]}
+[0m00:34:16.948435 [debug] [MainThread]: Flushing usage events
+[0m00:49:11.864698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae97f913d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae956a8d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae97ad3e80>]}
+
+
+============================== 00:49:11.868419 | ac2112e9-cf4d-4b75-ba69-cf369295b0ac ==============================
+[0m00:49:11.868419 [info ] [MainThread]: Running with dbt=1.8.7
+[0m00:49:11.869477 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/root/.dbt', 'log_path': '/usr/app/analytics_dbt/analytics_edz_dbt/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:49:11.966275 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m00:49:11.967382 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m00:49:12.107918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ac2112e9-cf4d-4b75-ba69-cf369295b0ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae9563c1c0>]}
+[0m00:49:12.150150 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ac2112e9-cf4d-4b75-ba69-cf369295b0ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae936649a0>]}
+[0m00:49:12.152424 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m00:49:12.177238 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m00:49:12.625610 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:49:12.626691 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:49:12.662817 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ac2112e9-cf4d-4b75-ba69-cf369295b0ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae9335f6a0>]}
+[0m00:49:12.820196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ac2112e9-cf4d-4b75-ba69-cf369295b0ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae93316460>]}
+[0m00:49:12.821408 [info ] [MainThread]: Found 5 models, 4 data tests, 489 macros
+[0m00:49:12.822395 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ac2112e9-cf4d-4b75-ba69-cf369295b0ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae967aab50>]}
+[0m00:49:12.825766 [info ] [MainThread]: 
+[0m00:49:12.827108 [debug] [MainThread]: Acquiring new redshift connection 'master'
+[0m00:49:12.832868 [debug] [ThreadPool]: Acquiring new redshift connection 'list_dev'
+[0m00:49:12.855583 [debug] [ThreadPool]: Using redshift connection "list_dev"
+[0m00:49:12.856906 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "connection_name": "list_dev"} */
+
+    select distinct nspname from pg_namespace
+[0m00:49:12.858134 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:49:12.862665 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:49:12.864403 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:49:15.015985 [debug] [ThreadPool]: SQL status: SUCCESS in 2.158 seconds
+[0m00:49:15.019866 [debug] [ThreadPool]: On list_dev: Close
+[0m00:49:15.023873 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now list_dev_public)
+[0m00:49:15.031466 [debug] [ThreadPool]: Using redshift connection "list_dev_public"
+[0m00:49:15.032396 [debug] [ThreadPool]: On list_dev_public: BEGIN
+[0m00:49:15.033306 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m00:49:15.034449 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:49:15.035463 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:49:17.614844 [debug] [ThreadPool]: SQL status: SUCCESS in 2.581 seconds
+[0m00:49:17.615904 [debug] [ThreadPool]: Using redshift connection "list_dev_public"
+[0m00:49:17.616712 [debug] [ThreadPool]: On list_dev_public: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "connection_name": "list_dev_public"} */
+select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema,
+        'table' as type
+    from information_schema.tables
+    where table_schema ilike 'public'
+    and table_type = 'BASE TABLE'
+    union all
+    select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case
+        when view_definition ilike '%create materialized view%'
+          then 'materialized_view'
+        else 'view'
+      end as type
+    from information_schema.views
+    where table_schema ilike 'public'
+[0m00:49:17.942697 [debug] [ThreadPool]: SQL status: SUCCESS in 0.325 seconds
+[0m00:49:17.945534 [debug] [ThreadPool]: On list_dev_public: ROLLBACK
+[0m00:49:18.241305 [debug] [ThreadPool]: On list_dev_public: Close
+[0m00:49:18.252360 [debug] [MainThread]: Using redshift connection "master"
+[0m00:49:18.255158 [debug] [MainThread]: On master: BEGIN
+[0m00:49:18.256081 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:49:18.257121 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:49:18.257870 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:49:19.801504 [debug] [MainThread]: SQL status: SUCCESS in 1.545 seconds
+[0m00:49:19.803786 [debug] [MainThread]: Using redshift connection "master"
+[0m00:49:19.805182 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "connection_name": "master"} */
+with
+    relation as (
+        select
+            pg_class.oid as relation_id,
+            pg_class.relname as relation_name,
+            pg_class.relnamespace as schema_id,
+            pg_namespace.nspname as schema_name,
+            pg_class.relkind as relation_type
+        from pg_class
+        join pg_namespace
+          on pg_class.relnamespace = pg_namespace.oid
+        where pg_namespace.nspname != 'information_schema'
+          and pg_namespace.nspname not like 'pg\_%'
+    ),
+    dependency as (
+        select distinct
+            coalesce(pg_rewrite.ev_class, pg_depend.objid) as dep_relation_id,
+            pg_depend.refobjid as ref_relation_id,
+            pg_depend.refclassid as ref_class_id
+        from pg_depend
+        left join pg_rewrite
+          on pg_depend.objid = pg_rewrite.oid
+        where coalesce(pg_rewrite.ev_class, pg_depend.objid) != pg_depend.refobjid
+    )
+
+select distinct
+    dep.schema_name as dependent_schema,
+    dep.relation_name as dependent_name,
+    ref.schema_name as referenced_schema,
+    ref.relation_name as referenced_name
+from dependency
+join relation ref
+    on dependency.ref_relation_id = ref.relation_id
+join relation dep
+    on dependency.dep_relation_id = dep.relation_id
+[0m00:49:20.158094 [debug] [MainThread]: SQL status: SUCCESS in 0.352 seconds
+[0m00:49:20.161115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ac2112e9-cf4d-4b75-ba69-cf369295b0ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae93336f70>]}
+[0m00:49:20.162383 [debug] [MainThread]: On master: ROLLBACK
+[0m00:49:20.455368 [debug] [MainThread]: Using redshift connection "master"
+[0m00:49:20.456398 [debug] [MainThread]: On master: BEGIN
+[0m00:49:20.593063 [debug] [MainThread]: SQL status: SUCCESS in 0.136 seconds
+[0m00:49:20.595729 [debug] [MainThread]: On master: COMMIT
+[0m00:49:20.597084 [debug] [MainThread]: Using redshift connection "master"
+[0m00:49:20.598132 [debug] [MainThread]: On master: COMMIT
+[0m00:49:20.882267 [debug] [MainThread]: SQL status: SUCCESS in 0.283 seconds
+[0m00:49:20.884336 [debug] [MainThread]: On master: Close
+[0m00:49:20.887217 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m00:49:20.888743 [info ] [MainThread]: 
+[0m00:49:20.896917 [debug] [Thread-1  ]: Began running node model.analytics_dbt.my_first_dbt_model
+[0m00:49:20.898530 [info ] [Thread-1  ]: 1 of 5 START sql table model public.my_first_dbt_model ......................... [RUN]
+[0m00:49:20.900022 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_dev_public, now model.analytics_dbt.my_first_dbt_model)
+[0m00:49:20.901490 [debug] [Thread-1  ]: Began compiling node model.analytics_dbt.my_first_dbt_model
+[0m00:49:20.906245 [debug] [Thread-1  ]: Writing injected SQL for node "model.analytics_dbt.my_first_dbt_model"
+[0m00:49:20.926663 [debug] [Thread-1  ]: Began executing node model.analytics_dbt.my_first_dbt_model
+[0m00:49:20.985777 [debug] [Thread-1  ]: Writing runtime sql for node "model.analytics_dbt.my_first_dbt_model"
+[0m00:49:21.002181 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:49:21.003473 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: BEGIN
+[0m00:49:21.004581 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:49:21.006246 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:49:21.007418 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:49:22.506667 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.502 seconds
+[0m00:49:22.508523 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:49:22.509994 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_first_dbt_model"} */
+
+  
+    
+
+  create  table
+    "dev"."public"."my_first_dbt_model__dbt_tmp"
+    
+    
+    
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+[0m00:49:22.900048 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.388 seconds
+[0m00:49:22.910373 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:49:22.911897 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_first_dbt_model"} */
+alter table "dev"."public"."my_first_dbt_model" rename to "my_first_dbt_model__dbt_backup"
+[0m00:49:23.486746 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.574 seconds
+[0m00:49:23.491519 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:49:23.492876 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_first_dbt_model"} */
+alter table "dev"."public"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m00:49:23.940760 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.446 seconds
+[0m00:49:23.962289 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: COMMIT
+[0m00:49:23.963599 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:49:23.964517 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: COMMIT
+[0m00:49:24.616650 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.651 seconds
+[0m00:49:24.618351 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:49:24.619846 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: BEGIN
+[0m00:49:24.934505 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.313 seconds
+[0m00:49:24.943973 [debug] [Thread-1  ]: Applying DROP to: "dev"."public"."my_first_dbt_model__dbt_backup"
+[0m00:49:24.949082 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:49:24.950465 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_first_dbt_model"} */
+drop table if exists "dev"."public"."my_first_dbt_model__dbt_backup" cascade
+[0m00:49:25.633454 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.280 seconds
+[0m00:49:25.635177 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: COMMIT
+[0m00:49:25.636414 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:49:25.637568 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: COMMIT
+[0m00:49:26.699450 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.504 seconds
+[0m00:49:26.700990 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m00:49:26.702314 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: BEGIN
+[0m00:49:26.840442 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.137 seconds
+[0m00:49:26.844219 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: ROLLBACK
+[0m00:49:27.140981 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: Close
+[0m00:49:27.146284 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ac2112e9-cf4d-4b75-ba69-cf369295b0ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae928dbd30>]}
+[0m00:49:27.148200 [info ] [Thread-1  ]: 1 of 5 OK created sql table model public.my_first_dbt_model .................... [[32mSUCCESS[0m in 6.24s]
+[0m00:49:27.149864 [debug] [Thread-1  ]: Finished running node model.analytics_dbt.my_first_dbt_model
+[0m00:49:27.151003 [debug] [Thread-1  ]: Began running node model.analytics_dbt.vw_sales
+[0m00:49:27.152226 [info ] [Thread-1  ]: 2 of 5 START sql view model public.vw_sales .................................... [RUN]
+[0m00:49:27.153917 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.analytics_dbt.my_first_dbt_model, now model.analytics_dbt.vw_sales)
+[0m00:49:27.155454 [debug] [Thread-1  ]: Began compiling node model.analytics_dbt.vw_sales
+[0m00:49:27.158658 [debug] [Thread-1  ]: Writing injected SQL for node "model.analytics_dbt.vw_sales"
+[0m00:49:27.173652 [debug] [Thread-1  ]: Began executing node model.analytics_dbt.vw_sales
+[0m00:49:27.198736 [debug] [Thread-1  ]: Writing runtime sql for node "model.analytics_dbt.vw_sales"
+[0m00:49:27.217231 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:49:27.218355 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: BEGIN
+[0m00:49:27.219273 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:49:27.220530 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:49:27.221558 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:49:28.744792 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.525 seconds
+[0m00:49:28.746315 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:49:28.747407 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.vw_sales"} */
+
+
+  create view "dev"."public"."vw_sales__dbt_tmp" as (
+    with source_sales as (
+    select *
+    from sales
+
+),
+
+renamed as (
+    select
+        SALESID AS ID_VENDA,
+        LISTID AS ID_LISTA,
+        SELLERID AS ID_VENDEDOR,
+        BUYERID AS ID_COMPRADOR,
+        EVENTID AS ID_EVENTO,
+        DATEID AS ID_DATE,
+        QTYSOLD AS QUANTIDADE_VENDIDA,
+        PRICEPAID AS VALOR_PAGO,
+        COMMISSION AS COMISSAO,
+        TO_CHAR(saletime, 'dd/mm/yyyy HH24:MI:SS') AS DATA_HORA_VENDA,
+        TO_CHAR(saletime, 'HH24:MI:SS') AS HORA_VENDA,
+        cast(saletime as date) AS DATA_VENDA
+
+  
+    FROM source_sales
+
+)
+
+select * from renamed
+  ) ;
+[0m00:49:29.327904 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.579 seconds
+[0m00:49:29.337355 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:49:29.338505 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.vw_sales"} */
+alter table "dev"."public"."vw_sales" rename to "vw_sales__dbt_backup"
+[0m00:49:29.759284 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.419 seconds
+[0m00:49:29.764889 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:49:29.766128 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.vw_sales"} */
+alter table "dev"."public"."vw_sales__dbt_tmp" rename to "vw_sales"
+[0m00:49:30.236905 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.469 seconds
+[0m00:49:30.239210 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: COMMIT
+[0m00:49:30.240406 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:49:30.241098 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: COMMIT
+[0m00:49:31.226088 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.984 seconds
+[0m00:49:31.228784 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:49:31.229683 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: BEGIN
+[0m00:49:32.444133 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.214 seconds
+[0m00:49:32.448197 [debug] [Thread-1  ]: Applying DROP to: "dev"."public"."vw_sales__dbt_backup"
+[0m00:49:32.451916 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:49:32.452849 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.vw_sales"} */
+drop view if exists "dev"."public"."vw_sales__dbt_backup" cascade
+[0m00:49:32.841988 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.388 seconds
+[0m00:49:32.844234 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: COMMIT
+[0m00:49:32.845444 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:49:32.846271 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: COMMIT
+[0m00:49:33.436808 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.590 seconds
+[0m00:49:33.438627 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m00:49:33.439786 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: BEGIN
+[0m00:49:33.633903 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.193 seconds
+[0m00:49:33.635959 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: ROLLBACK
+[0m00:49:34.045276 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: Close
+[0m00:49:34.046892 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ac2112e9-cf4d-4b75-ba69-cf369295b0ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae910924f0>]}
+[0m00:49:34.049182 [info ] [Thread-1  ]: 2 of 5 OK created sql view model public.vw_sales ............................... [[32mSUCCESS[0m in 6.89s]
+[0m00:49:34.050409 [debug] [Thread-1  ]: Finished running node model.analytics_dbt.vw_sales
+[0m00:49:34.051623 [debug] [Thread-1  ]: Began running node model.analytics_dbt.my_second_dbt_model
+[0m00:49:34.052786 [info ] [Thread-1  ]: 3 of 5 START sql view model public.my_second_dbt_model ......................... [RUN]
+[0m00:49:34.053771 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.analytics_dbt.vw_sales, now model.analytics_dbt.my_second_dbt_model)
+[0m00:49:34.054585 [debug] [Thread-1  ]: Began compiling node model.analytics_dbt.my_second_dbt_model
+[0m00:49:34.058086 [debug] [Thread-1  ]: Writing injected SQL for node "model.analytics_dbt.my_second_dbt_model"
+[0m00:49:34.070883 [debug] [Thread-1  ]: Began executing node model.analytics_dbt.my_second_dbt_model
+[0m00:49:34.080128 [debug] [Thread-1  ]: Writing runtime sql for node "model.analytics_dbt.my_second_dbt_model"
+[0m00:49:34.101830 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m00:49:34.103050 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: BEGIN
+[0m00:49:34.104086 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:49:34.105978 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:49:34.107503 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:49:36.396062 [debug] [Thread-1  ]: SQL status: SUCCESS in 2.292 seconds
+[0m00:49:36.397555 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m00:49:36.398916 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_second_dbt_model"} */
+
+
+  create view "dev"."public"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "dev"."public"."my_first_dbt_model"
+where id = 1
+  ) ;
+[0m00:49:36.968002 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.568 seconds
+[0m00:49:37.018324 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m00:49:37.019518 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_second_dbt_model"} */
+alter table "dev"."public"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m00:49:37.521884 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.501 seconds
+[0m00:49:37.524623 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: COMMIT
+[0m00:49:37.525674 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m00:49:37.526575 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: COMMIT
+[0m00:49:38.210687 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.683 seconds
+[0m00:49:38.213027 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m00:49:38.214012 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: BEGIN
+[0m00:49:38.493171 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.278 seconds
+[0m00:49:38.496691 [debug] [Thread-1  ]: Applying DROP to: "dev"."public"."my_second_dbt_model__dbt_backup"
+[0m00:49:38.498417 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m00:49:38.499461 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_second_dbt_model"} */
+drop view if exists "dev"."public"."my_second_dbt_model__dbt_backup" cascade
+[0m00:49:38.807074 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.307 seconds
+[0m00:49:38.809609 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: COMMIT
+[0m00:49:38.810649 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m00:49:38.811570 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: COMMIT
+[0m00:49:38.957191 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.145 seconds
+[0m00:49:38.958553 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m00:49:38.959589 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: BEGIN
+[0m00:49:39.101561 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.140 seconds
+[0m00:49:39.103904 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: ROLLBACK
+[0m00:49:39.378363 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: Close
+[0m00:49:39.379626 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ac2112e9-cf4d-4b75-ba69-cf369295b0ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae90f65f10>]}
+[0m00:49:39.381113 [info ] [Thread-1  ]: 3 of 5 OK created sql view model public.my_second_dbt_model .................... [[32mSUCCESS[0m in 5.33s]
+[0m00:49:39.382961 [debug] [Thread-1  ]: Finished running node model.analytics_dbt.my_second_dbt_model
+[0m00:49:39.383954 [debug] [Thread-1  ]: Began running node model.analytics_dbt.tb_10_compradores
+[0m00:49:39.384970 [info ] [Thread-1  ]: 4 of 5 START sql table model public.tb_10_compradores .......................... [RUN]
+[0m00:49:39.385719 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.analytics_dbt.my_second_dbt_model, now model.analytics_dbt.tb_10_compradores)
+[0m00:49:39.386749 [debug] [Thread-1  ]: Began compiling node model.analytics_dbt.tb_10_compradores
+[0m00:49:39.390452 [debug] [Thread-1  ]: Writing injected SQL for node "model.analytics_dbt.tb_10_compradores"
+[0m00:49:39.402164 [debug] [Thread-1  ]: Began executing node model.analytics_dbt.tb_10_compradores
+[0m00:49:39.406753 [debug] [Thread-1  ]: Writing runtime sql for node "model.analytics_dbt.tb_10_compradores"
+[0m00:49:39.426495 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m00:49:39.427506 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: BEGIN
+[0m00:49:39.428355 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:49:39.429456 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:49:39.430572 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:49:40.933140 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.505 seconds
+[0m00:49:40.934686 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m00:49:40.935816 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_10_compradores"} */
+
+  
+    
+
+  create  table
+    "dev"."public"."tb_10_compradores__dbt_tmp"
+    
+    
+    
+  as (
+    with sales as (
+
+    select * from "dev"."public"."vw_sales"
+
+),
+compradores as (
+
+    SELECT
+        (firstname ||' '|| lastname) as Nome_Completo, userid
+    FROM users
+),
+
+top_10_compradores as (
+
+    SELECT
+        compradores.Nome_Completo as Nome_Completo,
+        sum(sales.quantidade_vendida) as Vendas_totais,
+        sales.comissao as Comissao
+    FROM sales INNER JOIN compradores
+    ON sales.id_comprador = compradores.userid
+    GROUP BY compradores.userid, compradores.Nome_Completo, sales.comissao
+    ORDER BY Vendas_totais DESC
+    LIMIT 10
+
+)
+
+select * from top_10_compradores
+  );
+[0m00:49:41.383552 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.447 seconds
+[0m00:49:41.388879 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m00:49:41.389874 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_10_compradores"} */
+alter table "dev"."public"."tb_10_compradores" rename to "tb_10_compradores__dbt_backup"
+[0m00:49:41.955366 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.564 seconds
+[0m00:49:41.960512 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m00:49:41.961813 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_10_compradores"} */
+alter table "dev"."public"."tb_10_compradores__dbt_tmp" rename to "tb_10_compradores"
+[0m00:49:42.400470 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.437 seconds
+[0m00:49:42.404658 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: COMMIT
+[0m00:49:42.406489 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m00:49:42.407703 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: COMMIT
+[0m00:49:43.145543 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.736 seconds
+[0m00:49:43.148247 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m00:49:43.149092 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: BEGIN
+[0m00:49:43.437493 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.287 seconds
+[0m00:49:43.441458 [debug] [Thread-1  ]: Applying DROP to: "dev"."public"."tb_10_compradores__dbt_backup"
+[0m00:49:43.443440 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m00:49:43.444449 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_10_compradores"} */
+drop table if exists "dev"."public"."tb_10_compradores__dbt_backup" cascade
+[0m00:49:43.739111 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.293 seconds
+[0m00:49:43.741811 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: COMMIT
+[0m00:49:43.743107 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m00:49:43.743973 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: COMMIT
+[0m00:49:44.195533 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.450 seconds
+[0m00:49:44.197270 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m00:49:44.198354 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: BEGIN
+[0m00:49:44.337097 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.138 seconds
+[0m00:49:44.338921 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: ROLLBACK
+[0m00:49:44.625928 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: Close
+[0m00:49:44.627384 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ac2112e9-cf4d-4b75-ba69-cf369295b0ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae932a9f70>]}
+[0m00:49:44.628737 [info ] [Thread-1  ]: 4 of 5 OK created sql table model public.tb_10_compradores ..................... [[32mSUCCESS[0m in 5.24s]
+[0m00:49:44.629625 [debug] [Thread-1  ]: Finished running node model.analytics_dbt.tb_10_compradores
+[0m00:49:44.630383 [debug] [Thread-1  ]: Began running node model.analytics_dbt.tb_vendas_primeiro_trimestre
+[0m00:49:44.631221 [info ] [Thread-1  ]: 5 of 5 START sql table model public.tb_vendas_primeiro_trimestre ............... [RUN]
+[0m00:49:44.632231 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.analytics_dbt.tb_10_compradores, now model.analytics_dbt.tb_vendas_primeiro_trimestre)
+[0m00:49:44.633186 [debug] [Thread-1  ]: Began compiling node model.analytics_dbt.tb_vendas_primeiro_trimestre
+[0m00:49:44.637958 [debug] [Thread-1  ]: Writing injected SQL for node "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:49:44.650428 [debug] [Thread-1  ]: Began executing node model.analytics_dbt.tb_vendas_primeiro_trimestre
+[0m00:49:44.654961 [debug] [Thread-1  ]: Writing runtime sql for node "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:49:44.675184 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:49:44.676203 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: BEGIN
+[0m00:49:44.677216 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:49:44.678238 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:49:44.679039 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:49:46.425155 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.748 seconds
+[0m00:49:46.426763 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:49:46.428048 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_vendas_primeiro_trimestre"} */
+
+  
+    
+
+  create  table
+    "dev"."public"."tb_vendas_primeiro_trimestre__dbt_tmp"
+    
+    
+    
+  as (
+    -- define o as variáveis meses e ano
+
+
+
+-- cria a fonte com os dados de date e converte o  nome das colunas
+with source_date as (
+    select  dateid as id_date,
+            month as mes,
+            year as ano
+    from date
+
+),
+-- cria uma fonte de dados unindo a tabela sales com date
+sales_date as (
+
+    select  source_date.mes, 
+            sum(quantidade_vendida)
+    from  "dev"."public"."vw_sales" sales inner join source_date
+    on sales.id_date = source_date.id_date
+    where source_date.mes in ('JAN', 'FEB', 'MAR')
+    and source_date.ano = '2008'
+    group by source_date.mes
+)
+select * from sales_date
+  );
+[0m00:49:47.118030 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.689 seconds
+[0m00:49:47.123044 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:49:47.124164 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_vendas_primeiro_trimestre"} */
+alter table "dev"."public"."tb_vendas_primeiro_trimestre" rename to "tb_vendas_primeiro_trimestre__dbt_backup"
+[0m00:49:48.208854 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.084 seconds
+[0m00:49:48.213213 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:49:48.214521 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_vendas_primeiro_trimestre"} */
+alter table "dev"."public"."tb_vendas_primeiro_trimestre__dbt_tmp" rename to "tb_vendas_primeiro_trimestre"
+[0m00:49:48.803753 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.588 seconds
+[0m00:49:48.806317 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: COMMIT
+[0m00:49:48.807391 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:49:48.808187 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: COMMIT
+[0m00:49:49.696297 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.887 seconds
+[0m00:49:49.698655 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:49:49.699724 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: BEGIN
+[0m00:49:50.290498 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.590 seconds
+[0m00:49:50.294478 [debug] [Thread-1  ]: Applying DROP to: "dev"."public"."tb_vendas_primeiro_trimestre__dbt_backup"
+[0m00:49:50.295829 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:49:50.296660 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_vendas_primeiro_trimestre"} */
+drop table if exists "dev"."public"."tb_vendas_primeiro_trimestre__dbt_backup" cascade
+[0m00:49:50.787438 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.490 seconds
+[0m00:49:50.791233 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: COMMIT
+[0m00:49:50.792620 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:49:50.793767 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: COMMIT
+[0m00:49:51.282045 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.487 seconds
+[0m00:49:51.283698 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m00:49:51.284653 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: BEGIN
+[0m00:49:51.480105 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.194 seconds
+[0m00:49:51.482943 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: ROLLBACK
+[0m00:49:51.891819 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: Close
+[0m00:49:51.893031 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ac2112e9-cf4d-4b75-ba69-cf369295b0ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae90faca30>]}
+[0m00:49:51.894089 [info ] [Thread-1  ]: 5 of 5 OK created sql table model public.tb_vendas_primeiro_trimestre .......... [[32mSUCCESS[0m in 7.26s]
+[0m00:49:51.895066 [debug] [Thread-1  ]: Finished running node model.analytics_dbt.tb_vendas_primeiro_trimestre
+[0m00:49:51.898013 [debug] [MainThread]: Using redshift connection "master"
+[0m00:49:51.899021 [debug] [MainThread]: On master: BEGIN
+[0m00:49:51.899697 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:49:51.900546 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:49:51.901382 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:49:54.654979 [debug] [MainThread]: SQL status: SUCCESS in 2.755 seconds
+[0m00:49:54.656573 [debug] [MainThread]: On master: COMMIT
+[0m00:49:54.657835 [debug] [MainThread]: Using redshift connection "master"
+[0m00:49:54.659145 [debug] [MainThread]: On master: COMMIT
+[0m00:49:55.151528 [debug] [MainThread]: SQL status: SUCCESS in 0.491 seconds
+[0m00:49:55.153037 [debug] [MainThread]: On master: Close
+[0m00:49:55.154903 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:49:55.155696 [debug] [MainThread]: Connection 'model.analytics_dbt.tb_vendas_primeiro_trimestre' was properly closed.
+[0m00:49:55.156689 [info ] [MainThread]: 
+[0m00:49:55.157649 [info ] [MainThread]: Finished running 3 table models, 2 view models in 0 hours 0 minutes and 42.33 seconds (42.33s).
+[0m00:49:55.160148 [debug] [MainThread]: Command end result
+[0m00:49:55.252046 [info ] [MainThread]: 
+[0m00:49:55.253426 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:49:55.255040 [info ] [MainThread]: 
+[0m00:49:55.257231 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m00:49:55.260662 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 42.50976, "process_user_time": 2.226783, "process_kernel_time": 0.153219, "process_mem_max_rss": "105196", "process_in_blocks": "47568", "process_out_blocks": "0"}
+[0m00:49:55.262064 [debug] [MainThread]: Command `dbt run` succeeded at 00:49:55.261870 after 42.51 seconds
+[0m00:49:55.262939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae97f913d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae96c1fb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fae97f849d0>]}
+[0m00:49:55.263835 [debug] [MainThread]: Flushing usage events
+[0m00:58:21.715140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fecd0f023d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fecce619d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fecd0a44e80>]}
+
+
+============================== 00:58:21.719006 | a35ba5b6-dbf5-4320-865c-1646e18fa596 ==============================
+[0m00:58:21.719006 [info ] [MainThread]: Running with dbt=1.8.7
+[0m00:58:21.720066 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': '/usr/app/analytics_dbt/analytics_edz_dbt/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt test', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:58:21.818434 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m00:58:21.819358 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m00:58:21.990128 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a35ba5b6-dbf5-4320-865c-1646e18fa596', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fecce5ad1c0>]}
+[0m00:58:22.033658 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a35ba5b6-dbf5-4320-865c-1646e18fa596', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feccc5d59a0>]}
+[0m00:58:22.036450 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m00:58:22.056969 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m00:58:22.524020 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m00:58:22.525165 [debug] [MainThread]: Partial parsing: added file: analytics_dbt://tests/test_singular_nao_negativo.sql
+[0m00:58:22.695184 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a35ba5b6-dbf5-4320-865c-1646e18fa596', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feccc1ebe20>]}
+[0m00:58:22.872526 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a35ba5b6-dbf5-4320-865c-1646e18fa596', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feccbfe9670>]}
+[0m00:58:22.873802 [info ] [MainThread]: Found 5 models, 5 data tests, 489 macros
+[0m00:58:22.875020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a35ba5b6-dbf5-4320-865c-1646e18fa596', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feccc431fa0>]}
+[0m00:58:22.878279 [info ] [MainThread]: 
+[0m00:58:22.879810 [debug] [MainThread]: Acquiring new redshift connection 'master'
+[0m00:58:22.887513 [debug] [ThreadPool]: Acquiring new redshift connection 'list_dev_public'
+[0m00:58:22.908299 [debug] [ThreadPool]: Using redshift connection "list_dev_public"
+[0m00:58:22.909452 [debug] [ThreadPool]: On list_dev_public: BEGIN
+[0m00:58:22.910109 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:58:22.913956 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:58:22.915444 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:58:25.031164 [debug] [ThreadPool]: SQL status: SUCCESS in 2.121 seconds
+[0m00:58:25.032282 [debug] [ThreadPool]: Using redshift connection "list_dev_public"
+[0m00:58:25.033072 [debug] [ThreadPool]: On list_dev_public: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "connection_name": "list_dev_public"} */
+select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema,
+        'table' as type
+    from information_schema.tables
+    where table_schema ilike 'public'
+    and table_type = 'BASE TABLE'
+    union all
+    select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case
+        when view_definition ilike '%create materialized view%'
+          then 'materialized_view'
+        else 'view'
+      end as type
+    from information_schema.views
+    where table_schema ilike 'public'
+[0m00:58:25.329325 [debug] [ThreadPool]: SQL status: SUCCESS in 0.295 seconds
+[0m00:58:25.332383 [debug] [ThreadPool]: On list_dev_public: ROLLBACK
+[0m00:58:25.623550 [debug] [ThreadPool]: On list_dev_public: Close
+[0m00:58:25.635485 [debug] [MainThread]: Using redshift connection "master"
+[0m00:58:25.636486 [debug] [MainThread]: On master: BEGIN
+[0m00:58:25.637416 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:58:25.638574 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:58:25.639656 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:58:27.246184 [debug] [MainThread]: SQL status: SUCCESS in 1.608 seconds
+[0m00:58:27.248080 [debug] [MainThread]: Using redshift connection "master"
+[0m00:58:27.249661 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "connection_name": "master"} */
+with
+    relation as (
+        select
+            pg_class.oid as relation_id,
+            pg_class.relname as relation_name,
+            pg_class.relnamespace as schema_id,
+            pg_namespace.nspname as schema_name,
+            pg_class.relkind as relation_type
+        from pg_class
+        join pg_namespace
+          on pg_class.relnamespace = pg_namespace.oid
+        where pg_namespace.nspname != 'information_schema'
+          and pg_namespace.nspname not like 'pg\_%'
+    ),
+    dependency as (
+        select distinct
+            coalesce(pg_rewrite.ev_class, pg_depend.objid) as dep_relation_id,
+            pg_depend.refobjid as ref_relation_id,
+            pg_depend.refclassid as ref_class_id
+        from pg_depend
+        left join pg_rewrite
+          on pg_depend.objid = pg_rewrite.oid
+        where coalesce(pg_rewrite.ev_class, pg_depend.objid) != pg_depend.refobjid
+    )
+
+select distinct
+    dep.schema_name as dependent_schema,
+    dep.relation_name as dependent_name,
+    ref.schema_name as referenced_schema,
+    ref.relation_name as referenced_name
+from dependency
+join relation ref
+    on dependency.ref_relation_id = ref.relation_id
+join relation dep
+    on dependency.dep_relation_id = dep.relation_id
+[0m00:58:27.583876 [debug] [MainThread]: SQL status: SUCCESS in 0.332 seconds
+[0m00:58:27.587033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a35ba5b6-dbf5-4320-865c-1646e18fa596', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fecd0ef2b20>]}
+[0m00:58:27.587956 [debug] [MainThread]: On master: ROLLBACK
+[0m00:58:27.886827 [debug] [MainThread]: Using redshift connection "master"
+[0m00:58:27.889689 [debug] [MainThread]: On master: BEGIN
+[0m00:58:28.039595 [debug] [MainThread]: SQL status: SUCCESS in 0.148 seconds
+[0m00:58:28.041262 [debug] [MainThread]: On master: COMMIT
+[0m00:58:28.042270 [debug] [MainThread]: Using redshift connection "master"
+[0m00:58:28.043119 [debug] [MainThread]: On master: COMMIT
+[0m00:58:28.322815 [debug] [MainThread]: SQL status: SUCCESS in 0.279 seconds
+[0m00:58:28.324038 [debug] [MainThread]: On master: Close
+[0m00:58:28.326287 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m00:58:28.327673 [info ] [MainThread]: 
+[0m00:58:28.334787 [debug] [Thread-1  ]: Began running node test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710
+[0m00:58:28.335853 [info ] [Thread-1  ]: 1 of 5 START test not_null_my_first_dbt_model_id ............................... [RUN]
+[0m00:58:28.337253 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_dev_public, now test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710)
+[0m00:58:28.338643 [debug] [Thread-1  ]: Began compiling node test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710
+[0m00:58:28.357286 [debug] [Thread-1  ]: Writing injected SQL for node "test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m00:58:28.388453 [debug] [Thread-1  ]: Began executing node test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710
+[0m00:58:28.406088 [debug] [Thread-1  ]: Writing runtime sql for node "test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m00:58:28.439047 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m00:58:28.440004 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710: BEGIN
+[0m00:58:28.440813 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:58:28.443118 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:58:28.444575 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:58:29.986396 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.545 seconds
+[0m00:58:29.988232 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m00:58:29.990059 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from "dev"."public"."my_first_dbt_model"
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m00:58:30.414674 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.423 seconds
+[0m00:58:30.422643 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710: ROLLBACK
+[0m00:58:30.701056 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710: Close
+[0m00:58:30.703523 [error] [Thread-1  ]: 1 of 5 FAIL 1 not_null_my_first_dbt_model_id ................................... [[31mFAIL 1[0m in 2.37s]
+[0m00:58:30.705515 [debug] [Thread-1  ]: Finished running node test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710
+[0m00:58:30.706983 [debug] [Thread-1  ]: Began running node test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778
+[0m00:58:30.708090 [info ] [Thread-1  ]: 2 of 5 START test not_null_my_second_dbt_model_id .............................. [RUN]
+[0m00:58:30.709169 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710, now test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778)
+[0m00:58:30.709912 [debug] [Thread-1  ]: Began compiling node test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778
+[0m00:58:30.715960 [debug] [Thread-1  ]: Writing injected SQL for node "test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778"
+[0m00:58:30.730101 [debug] [Thread-1  ]: Began executing node test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778
+[0m00:58:30.789522 [debug] [Thread-1  ]: Writing runtime sql for node "test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778"
+[0m00:58:30.815136 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778"
+[0m00:58:30.816583 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778: BEGIN
+[0m00:58:30.817577 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:58:30.818893 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:58:30.820252 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:58:32.317061 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.499 seconds
+[0m00:58:32.319452 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778"
+[0m00:58:32.321141 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from "dev"."public"."my_second_dbt_model"
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m00:58:32.611036 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.288 seconds
+[0m00:58:32.615850 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778: ROLLBACK
+[0m00:58:32.893545 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778: Close
+[0m00:58:32.895743 [info ] [Thread-1  ]: 2 of 5 PASS not_null_my_second_dbt_model_id .................................... [[32mPASS[0m in 2.19s]
+[0m00:58:32.897977 [debug] [Thread-1  ]: Finished running node test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778
+[0m00:58:32.898865 [debug] [Thread-1  ]: Began running node test.analytics_dbt.test_singular_nao_negativo
+[0m00:58:32.899806 [info ] [Thread-1  ]: 3 of 5 START test test_singular_nao_negativo ................................... [RUN]
+[0m00:58:32.900952 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778, now test.analytics_dbt.test_singular_nao_negativo)
+[0m00:58:32.901918 [debug] [Thread-1  ]: Began compiling node test.analytics_dbt.test_singular_nao_negativo
+[0m00:58:32.906307 [debug] [Thread-1  ]: Writing injected SQL for node "test.analytics_dbt.test_singular_nao_negativo"
+[0m00:58:32.925314 [debug] [Thread-1  ]: Began executing node test.analytics_dbt.test_singular_nao_negativo
+[0m00:58:32.930203 [debug] [Thread-1  ]: Writing runtime sql for node "test.analytics_dbt.test_singular_nao_negativo"
+[0m00:58:32.957504 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.test_singular_nao_negativo"
+[0m00:58:32.958800 [debug] [Thread-1  ]: On test.analytics_dbt.test_singular_nao_negativo: BEGIN
+[0m00:58:32.960364 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:58:32.962264 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:58:32.963363 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:58:34.437121 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.477 seconds
+[0m00:58:34.438313 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.test_singular_nao_negativo"
+[0m00:58:34.439344 [debug] [Thread-1  ]: On test.analytics_dbt.test_singular_nao_negativo: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "test.analytics_dbt.test_singular_nao_negativo"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      -- testa se existe valore menores que 0 (negativos)
+select *
+    from tb_10_compradores
+    where vendas_totais < 0
+      
+    ) dbt_internal_test
+[0m00:58:34.893311 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.453 seconds
+[0m00:58:34.897077 [debug] [Thread-1  ]: On test.analytics_dbt.test_singular_nao_negativo: ROLLBACK
+[0m00:58:35.195105 [debug] [Thread-1  ]: On test.analytics_dbt.test_singular_nao_negativo: Close
+[0m00:58:35.196878 [info ] [Thread-1  ]: 3 of 5 PASS test_singular_nao_negativo ......................................... [[32mPASS[0m in 2.30s]
+[0m00:58:35.198739 [debug] [Thread-1  ]: Finished running node test.analytics_dbt.test_singular_nao_negativo
+[0m00:58:35.199656 [debug] [Thread-1  ]: Began running node test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321
+[0m00:58:35.200898 [info ] [Thread-1  ]: 4 of 5 START test unique_my_first_dbt_model_id ................................. [RUN]
+[0m00:58:35.202124 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.analytics_dbt.test_singular_nao_negativo, now test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321)
+[0m00:58:35.202872 [debug] [Thread-1  ]: Began compiling node test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321
+[0m00:58:35.211524 [debug] [Thread-1  ]: Writing injected SQL for node "test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321"
+[0m00:58:35.232430 [debug] [Thread-1  ]: Began executing node test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321
+[0m00:58:35.236773 [debug] [Thread-1  ]: Writing runtime sql for node "test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321"
+[0m00:58:35.258204 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321"
+[0m00:58:35.259477 [debug] [Thread-1  ]: On test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321: BEGIN
+[0m00:58:35.260223 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:58:35.261118 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:58:35.261854 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:58:36.799713 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.539 seconds
+[0m00:58:36.801083 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321"
+[0m00:58:36.802425 [debug] [Thread-1  ]: On test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from "dev"."public"."my_first_dbt_model"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m00:58:37.338922 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.535 seconds
+[0m00:58:37.340971 [debug] [Thread-1  ]: On test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321: ROLLBACK
+[0m00:58:37.817674 [debug] [Thread-1  ]: On test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321: Close
+[0m00:58:37.819598 [info ] [Thread-1  ]: 4 of 5 PASS unique_my_first_dbt_model_id ....................................... [[32mPASS[0m in 2.62s]
+[0m00:58:37.823411 [debug] [Thread-1  ]: Finished running node test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321
+[0m00:58:37.824765 [debug] [Thread-1  ]: Began running node test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493
+[0m00:58:37.825678 [info ] [Thread-1  ]: 5 of 5 START test unique_my_second_dbt_model_id ................................ [RUN]
+[0m00:58:37.826520 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321, now test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493)
+[0m00:58:37.827163 [debug] [Thread-1  ]: Began compiling node test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493
+[0m00:58:37.834288 [debug] [Thread-1  ]: Writing injected SQL for node "test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493"
+[0m00:58:37.853769 [debug] [Thread-1  ]: Began executing node test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493
+[0m00:58:37.857152 [debug] [Thread-1  ]: Writing runtime sql for node "test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493"
+[0m00:58:37.878114 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493"
+[0m00:58:37.879177 [debug] [Thread-1  ]: On test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493: BEGIN
+[0m00:58:37.880056 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m00:58:37.880968 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:58:37.881717 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:58:40.252251 [debug] [Thread-1  ]: SQL status: SUCCESS in 2.372 seconds
+[0m00:58:40.254048 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493"
+[0m00:58:40.255532 [debug] [Thread-1  ]: On test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from "dev"."public"."my_second_dbt_model"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m00:58:40.682863 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.426 seconds
+[0m00:58:40.685364 [debug] [Thread-1  ]: On test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493: ROLLBACK
+[0m00:58:40.969957 [debug] [Thread-1  ]: On test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493: Close
+[0m00:58:40.971963 [info ] [Thread-1  ]: 5 of 5 PASS unique_my_second_dbt_model_id ...................................... [[32mPASS[0m in 3.15s]
+[0m00:58:40.974723 [debug] [Thread-1  ]: Finished running node test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493
+[0m00:58:40.978075 [debug] [MainThread]: Using redshift connection "master"
+[0m00:58:40.979245 [debug] [MainThread]: On master: BEGIN
+[0m00:58:40.980121 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:58:40.980883 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m00:58:40.981415 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m00:58:42.454909 [debug] [MainThread]: SQL status: SUCCESS in 1.475 seconds
+[0m00:58:42.456110 [debug] [MainThread]: On master: COMMIT
+[0m00:58:42.457541 [debug] [MainThread]: Using redshift connection "master"
+[0m00:58:42.459183 [debug] [MainThread]: On master: COMMIT
+[0m00:58:43.164490 [debug] [MainThread]: SQL status: SUCCESS in 0.276 seconds
+[0m00:58:43.165846 [debug] [MainThread]: On master: Close
+[0m00:58:43.168991 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:58:43.171528 [debug] [MainThread]: Connection 'test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493' was properly closed.
+[0m00:58:43.173750 [info ] [MainThread]: 
+[0m00:58:43.176395 [info ] [MainThread]: Finished running 5 data tests in 0 hours 0 minutes and 20.29 seconds (20.29s).
+[0m00:58:43.180247 [debug] [MainThread]: Command end result
+[0m00:58:43.844438 [info ] [MainThread]: 
+[0m00:58:43.846124 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m00:58:43.847217 [info ] [MainThread]: 
+[0m00:58:43.848616 [error] [MainThread]: [31mFailure in test not_null_my_first_dbt_model_id (models/example/schema.yml)[0m
+[0m00:58:43.849490 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m00:58:43.850410 [info ] [MainThread]: 
+[0m00:58:43.851603 [info ] [MainThread]:   compiled code at target/compiled/analytics_dbt/models/example/schema.yml/not_null_my_first_dbt_model_id.sql
+[0m00:58:43.852696 [info ] [MainThread]: 
+[0m00:58:43.853821 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=1 SKIP=0 TOTAL=5
+[0m00:58:43.858020 [debug] [MainThread]: Resource report: {"command_name": "test", "command_wall_clock_time": 21.226156, "process_user_time": 1.989196, "process_kernel_time": 0.349858, "process_mem_max_rss": "109024", "process_in_blocks": "83400", "command_success": false, "process_out_blocks": "0"}
+[0m00:58:43.859058 [debug] [MainThread]: Command `dbt test` failed at 00:58:43.858893 after 21.23 seconds
+[0m00:58:43.860049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fecd0f023d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feccc2a5100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feccc2a55e0>]}
+[0m00:58:43.861547 [debug] [MainThread]: Flushing usage events
+[0m01:03:37.611345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe472b9a3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4702b1d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4726dee80>]}
+
+
+============================== 01:03:37.614621 | 10e92fb8-9736-43b1-bdb8-36647d1bb6f1 ==============================
+[0m01:03:37.614621 [info ] [MainThread]: Running with dbt=1.8.7
+[0m01:03:37.615729 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/root/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/usr/app/analytics_dbt/analytics_edz_dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt test', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m01:03:37.674753 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m01:03:37.675782 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m01:03:37.788822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '10e92fb8-9736-43b1-bdb8-36647d1bb6f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe4702491c0>]}
+[0m01:03:37.829609 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '10e92fb8-9736-43b1-bdb8-36647d1bb6f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe46e26c9a0>]}
+[0m01:03:37.831125 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m01:03:37.850203 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m01:03:38.257234 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m01:03:38.258543 [debug] [MainThread]: Partial parsing: updated file: analytics_dbt://models/example/schema.yml
+[0m01:03:38.304720 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m01:03:38.305851 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '10e92fb8-9736-43b1-bdb8-36647d1bb6f1', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe46e222190>]}
+[0m01:03:38.481609 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '10e92fb8-9736-43b1-bdb8-36647d1bb6f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe46ddbdeb0>]}
+[0m01:03:38.654955 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '10e92fb8-9736-43b1-bdb8-36647d1bb6f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe46dbb8dc0>]}
+[0m01:03:38.656130 [info ] [MainThread]: Found 5 models, 11 data tests, 489 macros
+[0m01:03:38.657145 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '10e92fb8-9736-43b1-bdb8-36647d1bb6f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe46dbb8880>]}
+[0m01:03:38.660036 [info ] [MainThread]: 
+[0m01:03:38.661330 [debug] [MainThread]: Acquiring new redshift connection 'master'
+[0m01:03:38.667150 [debug] [ThreadPool]: Acquiring new redshift connection 'list_dev_public'
+[0m01:03:38.685271 [debug] [ThreadPool]: Using redshift connection "list_dev_public"
+[0m01:03:38.686407 [debug] [ThreadPool]: On list_dev_public: BEGIN
+[0m01:03:38.687322 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:03:38.691211 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:03:38.692780 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:03:40.559983 [debug] [ThreadPool]: SQL status: SUCCESS in 1.872 seconds
+[0m01:03:40.561775 [debug] [ThreadPool]: Using redshift connection "list_dev_public"
+[0m01:03:40.563096 [debug] [ThreadPool]: On list_dev_public: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "connection_name": "list_dev_public"} */
+select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema,
+        'table' as type
+    from information_schema.tables
+    where table_schema ilike 'public'
+    and table_type = 'BASE TABLE'
+    union all
+    select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case
+        when view_definition ilike '%create materialized view%'
+          then 'materialized_view'
+        else 'view'
+      end as type
+    from information_schema.views
+    where table_schema ilike 'public'
+[0m01:03:40.877516 [debug] [ThreadPool]: SQL status: SUCCESS in 0.313 seconds
+[0m01:03:40.881621 [debug] [ThreadPool]: On list_dev_public: ROLLBACK
+[0m01:03:41.169292 [debug] [ThreadPool]: On list_dev_public: Close
+[0m01:03:41.185181 [debug] [MainThread]: Using redshift connection "master"
+[0m01:03:41.186059 [debug] [MainThread]: On master: BEGIN
+[0m01:03:41.186840 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:03:41.187743 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:03:41.188544 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:03:42.742315 [debug] [MainThread]: SQL status: SUCCESS in 1.555 seconds
+[0m01:03:42.743980 [debug] [MainThread]: Using redshift connection "master"
+[0m01:03:42.745227 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "connection_name": "master"} */
+with
+    relation as (
+        select
+            pg_class.oid as relation_id,
+            pg_class.relname as relation_name,
+            pg_class.relnamespace as schema_id,
+            pg_namespace.nspname as schema_name,
+            pg_class.relkind as relation_type
+        from pg_class
+        join pg_namespace
+          on pg_class.relnamespace = pg_namespace.oid
+        where pg_namespace.nspname != 'information_schema'
+          and pg_namespace.nspname not like 'pg\_%'
+    ),
+    dependency as (
+        select distinct
+            coalesce(pg_rewrite.ev_class, pg_depend.objid) as dep_relation_id,
+            pg_depend.refobjid as ref_relation_id,
+            pg_depend.refclassid as ref_class_id
+        from pg_depend
+        left join pg_rewrite
+          on pg_depend.objid = pg_rewrite.oid
+        where coalesce(pg_rewrite.ev_class, pg_depend.objid) != pg_depend.refobjid
+    )
+
+select distinct
+    dep.schema_name as dependent_schema,
+    dep.relation_name as dependent_name,
+    ref.schema_name as referenced_schema,
+    ref.relation_name as referenced_name
+from dependency
+join relation ref
+    on dependency.ref_relation_id = ref.relation_id
+join relation dep
+    on dependency.dep_relation_id = dep.relation_id
+[0m01:03:45.151197 [debug] [MainThread]: SQL status: SUCCESS in 2.405 seconds
+[0m01:03:45.156111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '10e92fb8-9736-43b1-bdb8-36647d1bb6f1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe46db722e0>]}
+[0m01:03:45.158195 [debug] [MainThread]: On master: ROLLBACK
+[0m01:03:45.952109 [debug] [MainThread]: Using redshift connection "master"
+[0m01:03:45.954557 [debug] [MainThread]: On master: BEGIN
+[0m01:03:46.247759 [debug] [MainThread]: SQL status: SUCCESS in 0.291 seconds
+[0m01:03:46.249778 [debug] [MainThread]: On master: COMMIT
+[0m01:03:46.251877 [debug] [MainThread]: Using redshift connection "master"
+[0m01:03:46.253641 [debug] [MainThread]: On master: COMMIT
+[0m01:03:46.827188 [debug] [MainThread]: SQL status: SUCCESS in 0.572 seconds
+[0m01:03:46.829062 [debug] [MainThread]: On master: Close
+[0m01:03:46.830837 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m01:03:46.831995 [info ] [MainThread]: 
+[0m01:03:46.838030 [debug] [Thread-1  ]: Began running node test.analytics_dbt.nao_negativo_tb_10_compradores_vendas_totais.9af17926ea
+[0m01:03:46.838986 [info ] [Thread-1  ]: 1 of 11 START test nao_negativo_tb_10_compradores_vendas_totais ................ [RUN]
+[0m01:03:46.839845 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_dev_public, now test.analytics_dbt.nao_negativo_tb_10_compradores_vendas_totais.9af17926ea)
+[0m01:03:46.840811 [debug] [Thread-1  ]: Began compiling node test.analytics_dbt.nao_negativo_tb_10_compradores_vendas_totais.9af17926ea
+[0m01:03:46.853832 [debug] [Thread-1  ]: Compilation Error in test nao_negativo_tb_10_compradores_vendas_totais (models/example/schema.yml)
+  'test_nao_negativo' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m01:03:46.854980 [error] [Thread-1  ]: 1 of 11 ERROR nao_negativo_tb_10_compradores_vendas_totais ..................... [[31mERROR[0m in 0.02s]
+[0m01:03:46.856009 [debug] [Thread-1  ]: Finished running node test.analytics_dbt.nao_negativo_tb_10_compradores_vendas_totais.9af17926ea
+[0m01:03:46.857344 [debug] [Thread-1  ]: Began running node test.analytics_dbt.nao_negativo_vw_sales_comissao.c9561fd7db
+[0m01:03:46.858612 [info ] [Thread-1  ]: 2 of 11 START test nao_negativo_vw_sales_comissao .............................. [RUN]
+[0m01:03:46.859642 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.analytics_dbt.nao_negativo_tb_10_compradores_vendas_totais.9af17926ea, now test.analytics_dbt.nao_negativo_vw_sales_comissao.c9561fd7db)
+[0m01:03:46.860966 [debug] [Thread-1  ]: Began compiling node test.analytics_dbt.nao_negativo_vw_sales_comissao.c9561fd7db
+[0m01:03:46.868471 [debug] [Thread-1  ]: Compilation Error in test nao_negativo_vw_sales_comissao (models/example/schema.yml)
+  'test_nao_negativo' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m01:03:46.869740 [error] [Thread-1  ]: 2 of 11 ERROR nao_negativo_vw_sales_comissao ................................... [[31mERROR[0m in 0.01s]
+[0m01:03:46.870563 [debug] [Thread-1  ]: Finished running node test.analytics_dbt.nao_negativo_vw_sales_comissao.c9561fd7db
+[0m01:03:46.871193 [debug] [Thread-1  ]: Began running node test.analytics_dbt.nao_negativo_vw_sales_valor_pago.7a9d055b10
+[0m01:03:46.871965 [info ] [Thread-1  ]: 3 of 11 START test nao_negativo_vw_sales_valor_pago ............................ [RUN]
+[0m01:03:46.873209 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.analytics_dbt.nao_negativo_vw_sales_comissao.c9561fd7db, now test.analytics_dbt.nao_negativo_vw_sales_valor_pago.7a9d055b10)
+[0m01:03:46.874264 [debug] [Thread-1  ]: Began compiling node test.analytics_dbt.nao_negativo_vw_sales_valor_pago.7a9d055b10
+[0m01:03:46.880508 [debug] [Thread-1  ]: Compilation Error in test nao_negativo_vw_sales_valor_pago (models/example/schema.yml)
+  'test_nao_negativo' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m01:03:46.882255 [error] [Thread-1  ]: 3 of 11 ERROR nao_negativo_vw_sales_valor_pago ................................. [[31mERROR[0m in 0.01s]
+[0m01:03:46.883504 [debug] [Thread-1  ]: Finished running node test.analytics_dbt.nao_negativo_vw_sales_valor_pago.7a9d055b10
+[0m01:03:46.884533 [debug] [Thread-1  ]: Began running node test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710
+[0m01:03:46.885353 [info ] [Thread-1  ]: 4 of 11 START test not_null_my_first_dbt_model_id .............................. [RUN]
+[0m01:03:46.886334 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.analytics_dbt.nao_negativo_vw_sales_valor_pago.7a9d055b10, now test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710)
+[0m01:03:46.887333 [debug] [Thread-1  ]: Began compiling node test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710
+[0m01:03:46.899679 [debug] [Thread-1  ]: Writing injected SQL for node "test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m01:03:46.918210 [debug] [Thread-1  ]: Began executing node test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710
+[0m01:03:46.934222 [debug] [Thread-1  ]: Writing runtime sql for node "test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m01:03:46.953237 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m01:03:46.954010 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710: BEGIN
+[0m01:03:46.954815 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:03:46.955934 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:03:46.957079 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:03:49.807437 [debug] [Thread-1  ]: SQL status: SUCCESS in 2.852 seconds
+[0m01:03:49.809722 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m01:03:49.811607 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from "dev"."public"."my_first_dbt_model"
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m01:03:50.502319 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.689 seconds
+[0m01:03:50.511424 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710: ROLLBACK
+[0m01:03:50.900942 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710: Close
+[0m01:03:50.904034 [error] [Thread-1  ]: 4 of 11 FAIL 1 not_null_my_first_dbt_model_id .................................. [[31mFAIL 1[0m in 4.02s]
+[0m01:03:50.906806 [debug] [Thread-1  ]: Finished running node test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710
+[0m01:03:50.908867 [debug] [Thread-1  ]: Began running node test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778
+[0m01:03:50.910370 [info ] [Thread-1  ]: 5 of 11 START test not_null_my_second_dbt_model_id ............................. [RUN]
+[0m01:03:50.911728 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.analytics_dbt.not_null_my_first_dbt_model_id.5fb22c2710, now test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778)
+[0m01:03:50.912541 [debug] [Thread-1  ]: Began compiling node test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778
+[0m01:03:50.917679 [debug] [Thread-1  ]: Writing injected SQL for node "test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778"
+[0m01:03:50.934767 [debug] [Thread-1  ]: Began executing node test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778
+[0m01:03:50.938040 [debug] [Thread-1  ]: Writing runtime sql for node "test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778"
+[0m01:03:50.955802 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778"
+[0m01:03:50.957339 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778: BEGIN
+[0m01:03:50.958376 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:03:50.959456 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:03:50.960185 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:03:56.062869 [debug] [Thread-1  ]: SQL status: SUCCESS in 4.623 seconds
+[0m01:03:56.065360 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778"
+[0m01:03:56.067445 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from "dev"."public"."my_second_dbt_model"
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m01:03:56.370238 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.301 seconds
+[0m01:03:56.372746 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778: ROLLBACK
+[0m01:03:56.669809 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778: Close
+[0m01:03:56.672885 [info ] [Thread-1  ]: 5 of 11 PASS not_null_my_second_dbt_model_id ................................... [[32mPASS[0m in 5.76s]
+[0m01:03:56.675361 [debug] [Thread-1  ]: Finished running node test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778
+[0m01:03:56.677609 [debug] [Thread-1  ]: Began running node test.analytics_dbt.not_null_tb_10_compradores_vendas_totais.ae3fdb0752
+[0m01:03:56.679077 [info ] [Thread-1  ]: 6 of 11 START test not_null_tb_10_compradores_vendas_totais .................... [RUN]
+[0m01:03:56.680491 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.analytics_dbt.not_null_my_second_dbt_model_id.151b76d778, now test.analytics_dbt.not_null_tb_10_compradores_vendas_totais.ae3fdb0752)
+[0m01:03:56.681956 [debug] [Thread-1  ]: Began compiling node test.analytics_dbt.not_null_tb_10_compradores_vendas_totais.ae3fdb0752
+[0m01:03:56.687189 [debug] [Thread-1  ]: Writing injected SQL for node "test.analytics_dbt.not_null_tb_10_compradores_vendas_totais.ae3fdb0752"
+[0m01:03:56.706135 [debug] [Thread-1  ]: Began executing node test.analytics_dbt.not_null_tb_10_compradores_vendas_totais.ae3fdb0752
+[0m01:03:56.713566 [debug] [Thread-1  ]: Writing runtime sql for node "test.analytics_dbt.not_null_tb_10_compradores_vendas_totais.ae3fdb0752"
+[0m01:03:56.736864 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.not_null_tb_10_compradores_vendas_totais.ae3fdb0752"
+[0m01:03:56.738265 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_tb_10_compradores_vendas_totais.ae3fdb0752: BEGIN
+[0m01:03:56.739050 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:03:56.740015 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:03:56.740759 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:03:58.337975 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.599 seconds
+[0m01:03:58.339369 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.not_null_tb_10_compradores_vendas_totais.ae3fdb0752"
+[0m01:03:58.340368 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_tb_10_compradores_vendas_totais.ae3fdb0752: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "test.analytics_dbt.not_null_tb_10_compradores_vendas_totais.ae3fdb0752"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select vendas_totais
+from "dev"."public"."tb_10_compradores"
+where vendas_totais is null
+
+
+
+      
+    ) dbt_internal_test
+[0m01:03:58.732861 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.391 seconds
+[0m01:03:58.736370 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_tb_10_compradores_vendas_totais.ae3fdb0752: ROLLBACK
+[0m01:03:59.021473 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_tb_10_compradores_vendas_totais.ae3fdb0752: Close
+[0m01:03:59.023148 [info ] [Thread-1  ]: 6 of 11 PASS not_null_tb_10_compradores_vendas_totais .......................... [[32mPASS[0m in 2.34s]
+[0m01:03:59.025558 [debug] [Thread-1  ]: Finished running node test.analytics_dbt.not_null_tb_10_compradores_vendas_totais.ae3fdb0752
+[0m01:03:59.026803 [debug] [Thread-1  ]: Began running node test.analytics_dbt.not_null_vw_sales_comissao.d9b6c254ab
+[0m01:03:59.027613 [info ] [Thread-1  ]: 7 of 11 START test not_null_vw_sales_comissao .................................. [RUN]
+[0m01:03:59.028692 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.analytics_dbt.not_null_tb_10_compradores_vendas_totais.ae3fdb0752, now test.analytics_dbt.not_null_vw_sales_comissao.d9b6c254ab)
+[0m01:03:59.029543 [debug] [Thread-1  ]: Began compiling node test.analytics_dbt.not_null_vw_sales_comissao.d9b6c254ab
+[0m01:03:59.037266 [debug] [Thread-1  ]: Writing injected SQL for node "test.analytics_dbt.not_null_vw_sales_comissao.d9b6c254ab"
+[0m01:03:59.055762 [debug] [Thread-1  ]: Began executing node test.analytics_dbt.not_null_vw_sales_comissao.d9b6c254ab
+[0m01:03:59.059970 [debug] [Thread-1  ]: Writing runtime sql for node "test.analytics_dbt.not_null_vw_sales_comissao.d9b6c254ab"
+[0m01:03:59.080717 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.not_null_vw_sales_comissao.d9b6c254ab"
+[0m01:03:59.082145 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_vw_sales_comissao.d9b6c254ab: BEGIN
+[0m01:03:59.083229 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:03:59.084264 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:03:59.085005 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:04:00.737046 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.653 seconds
+[0m01:04:00.739010 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.not_null_vw_sales_comissao.d9b6c254ab"
+[0m01:04:00.740253 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_vw_sales_comissao.d9b6c254ab: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "test.analytics_dbt.not_null_vw_sales_comissao.d9b6c254ab"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select comissao
+from "dev"."public"."vw_sales"
+where comissao is null
+
+
+
+      
+    ) dbt_internal_test
+[0m01:04:01.103924 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.362 seconds
+[0m01:04:01.106228 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_vw_sales_comissao.d9b6c254ab: ROLLBACK
+[0m01:04:01.423225 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_vw_sales_comissao.d9b6c254ab: Close
+[0m01:04:01.426612 [info ] [Thread-1  ]: 7 of 11 PASS not_null_vw_sales_comissao ........................................ [[32mPASS[0m in 2.40s]
+[0m01:04:01.429116 [debug] [Thread-1  ]: Finished running node test.analytics_dbt.not_null_vw_sales_comissao.d9b6c254ab
+[0m01:04:01.430383 [debug] [Thread-1  ]: Began running node test.analytics_dbt.not_null_vw_sales_valor_pago.5cd141ad26
+[0m01:04:01.431376 [info ] [Thread-1  ]: 8 of 11 START test not_null_vw_sales_valor_pago ................................ [RUN]
+[0m01:04:01.432374 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.analytics_dbt.not_null_vw_sales_comissao.d9b6c254ab, now test.analytics_dbt.not_null_vw_sales_valor_pago.5cd141ad26)
+[0m01:04:01.433258 [debug] [Thread-1  ]: Began compiling node test.analytics_dbt.not_null_vw_sales_valor_pago.5cd141ad26
+[0m01:04:01.438359 [debug] [Thread-1  ]: Writing injected SQL for node "test.analytics_dbt.not_null_vw_sales_valor_pago.5cd141ad26"
+[0m01:04:01.456034 [debug] [Thread-1  ]: Began executing node test.analytics_dbt.not_null_vw_sales_valor_pago.5cd141ad26
+[0m01:04:01.462019 [debug] [Thread-1  ]: Writing runtime sql for node "test.analytics_dbt.not_null_vw_sales_valor_pago.5cd141ad26"
+[0m01:04:01.484006 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.not_null_vw_sales_valor_pago.5cd141ad26"
+[0m01:04:01.485052 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_vw_sales_valor_pago.5cd141ad26: BEGIN
+[0m01:04:01.485838 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:04:01.486782 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:04:01.487740 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:04:03.056364 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.570 seconds
+[0m01:04:03.058244 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.not_null_vw_sales_valor_pago.5cd141ad26"
+[0m01:04:03.059368 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_vw_sales_valor_pago.5cd141ad26: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "test.analytics_dbt.not_null_vw_sales_valor_pago.5cd141ad26"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select valor_pago
+from "dev"."public"."vw_sales"
+where valor_pago is null
+
+
+
+      
+    ) dbt_internal_test
+[0m01:04:03.384959 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.324 seconds
+[0m01:04:03.388560 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_vw_sales_valor_pago.5cd141ad26: ROLLBACK
+[0m01:04:03.704698 [debug] [Thread-1  ]: On test.analytics_dbt.not_null_vw_sales_valor_pago.5cd141ad26: Close
+[0m01:04:03.707465 [info ] [Thread-1  ]: 8 of 11 PASS not_null_vw_sales_valor_pago ...................................... [[32mPASS[0m in 2.27s]
+[0m01:04:03.709856 [debug] [Thread-1  ]: Finished running node test.analytics_dbt.not_null_vw_sales_valor_pago.5cd141ad26
+[0m01:04:03.711643 [debug] [Thread-1  ]: Began running node test.analytics_dbt.test_singular_nao_negativo
+[0m01:04:03.713038 [info ] [Thread-1  ]: 9 of 11 START test test_singular_nao_negativo .................................. [RUN]
+[0m01:04:03.714077 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.analytics_dbt.not_null_vw_sales_valor_pago.5cd141ad26, now test.analytics_dbt.test_singular_nao_negativo)
+[0m01:04:03.715060 [debug] [Thread-1  ]: Began compiling node test.analytics_dbt.test_singular_nao_negativo
+[0m01:04:03.717791 [debug] [Thread-1  ]: Writing injected SQL for node "test.analytics_dbt.test_singular_nao_negativo"
+[0m01:04:03.732711 [debug] [Thread-1  ]: Began executing node test.analytics_dbt.test_singular_nao_negativo
+[0m01:04:03.738231 [debug] [Thread-1  ]: Writing runtime sql for node "test.analytics_dbt.test_singular_nao_negativo"
+[0m01:04:03.756602 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.test_singular_nao_negativo"
+[0m01:04:03.757641 [debug] [Thread-1  ]: On test.analytics_dbt.test_singular_nao_negativo: BEGIN
+[0m01:04:03.758572 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:04:03.759934 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:04:03.760823 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:04:05.294342 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.535 seconds
+[0m01:04:05.296541 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.test_singular_nao_negativo"
+[0m01:04:05.298530 [debug] [Thread-1  ]: On test.analytics_dbt.test_singular_nao_negativo: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "test.analytics_dbt.test_singular_nao_negativo"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      -- testa se existe valore menores que 0 (negativos)
+select *
+    from tb_10_compradores
+    where vendas_totais < 0
+      
+    ) dbt_internal_test
+[0m01:04:05.591837 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.291 seconds
+[0m01:04:05.594723 [debug] [Thread-1  ]: On test.analytics_dbt.test_singular_nao_negativo: ROLLBACK
+[0m01:04:06.069108 [debug] [Thread-1  ]: On test.analytics_dbt.test_singular_nao_negativo: Close
+[0m01:04:06.070667 [info ] [Thread-1  ]: 9 of 11 PASS test_singular_nao_negativo ........................................ [[32mPASS[0m in 2.36s]
+[0m01:04:06.073180 [debug] [Thread-1  ]: Finished running node test.analytics_dbt.test_singular_nao_negativo
+[0m01:04:06.074171 [debug] [Thread-1  ]: Began running node test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321
+[0m01:04:06.075030 [info ] [Thread-1  ]: 10 of 11 START test unique_my_first_dbt_model_id ............................... [RUN]
+[0m01:04:06.075867 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.analytics_dbt.test_singular_nao_negativo, now test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321)
+[0m01:04:06.076650 [debug] [Thread-1  ]: Began compiling node test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321
+[0m01:04:06.084539 [debug] [Thread-1  ]: Writing injected SQL for node "test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321"
+[0m01:04:06.102268 [debug] [Thread-1  ]: Began executing node test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321
+[0m01:04:06.105457 [debug] [Thread-1  ]: Writing runtime sql for node "test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321"
+[0m01:04:06.126701 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321"
+[0m01:04:06.127798 [debug] [Thread-1  ]: On test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321: BEGIN
+[0m01:04:06.128591 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:04:06.129502 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:04:06.130364 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:04:10.849927 [debug] [Thread-1  ]: SQL status: SUCCESS in 4.721 seconds
+[0m01:04:10.852346 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321"
+[0m01:04:10.854284 [debug] [Thread-1  ]: On test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from "dev"."public"."my_first_dbt_model"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m01:04:11.958086 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.102 seconds
+[0m01:04:11.963015 [debug] [Thread-1  ]: On test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321: ROLLBACK
+[0m01:04:12.743102 [debug] [Thread-1  ]: On test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321: Close
+[0m01:04:12.745883 [info ] [Thread-1  ]: 10 of 11 PASS unique_my_first_dbt_model_id ..................................... [[32mPASS[0m in 6.67s]
+[0m01:04:12.748100 [debug] [Thread-1  ]: Finished running node test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321
+[0m01:04:12.749961 [debug] [Thread-1  ]: Began running node test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493
+[0m01:04:12.751910 [info ] [Thread-1  ]: 11 of 11 START test unique_my_second_dbt_model_id .............................. [RUN]
+[0m01:04:12.753853 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly test.analytics_dbt.unique_my_first_dbt_model_id.16e066b321, now test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493)
+[0m01:04:12.755442 [debug] [Thread-1  ]: Began compiling node test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493
+[0m01:04:12.764528 [debug] [Thread-1  ]: Writing injected SQL for node "test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493"
+[0m01:04:12.794250 [debug] [Thread-1  ]: Began executing node test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493
+[0m01:04:12.800853 [debug] [Thread-1  ]: Writing runtime sql for node "test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493"
+[0m01:04:12.830974 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493"
+[0m01:04:12.833003 [debug] [Thread-1  ]: On test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493: BEGIN
+[0m01:04:12.834609 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:04:12.836546 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:04:12.838617 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:04:16.980269 [debug] [Thread-1  ]: SQL status: SUCCESS in 4.146 seconds
+[0m01:04:16.981929 [debug] [Thread-1  ]: Using redshift connection "test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493"
+[0m01:04:16.983365 [debug] [Thread-1  ]: On test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from "dev"."public"."my_second_dbt_model"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m01:04:17.282007 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.297 seconds
+[0m01:04:17.289433 [debug] [Thread-1  ]: On test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493: ROLLBACK
+[0m01:04:17.575562 [debug] [Thread-1  ]: On test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493: Close
+[0m01:04:17.577879 [info ] [Thread-1  ]: 11 of 11 PASS unique_my_second_dbt_model_id .................................... [[32mPASS[0m in 4.82s]
+[0m01:04:17.580171 [debug] [Thread-1  ]: Finished running node test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493
+[0m01:04:17.585118 [debug] [MainThread]: Using redshift connection "master"
+[0m01:04:17.586412 [debug] [MainThread]: On master: BEGIN
+[0m01:04:17.587269 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m01:04:17.588663 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:04:17.589755 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:04:19.078070 [debug] [MainThread]: SQL status: SUCCESS in 1.490 seconds
+[0m01:04:19.080292 [debug] [MainThread]: On master: COMMIT
+[0m01:04:19.082356 [debug] [MainThread]: Using redshift connection "master"
+[0m01:04:19.084013 [debug] [MainThread]: On master: COMMIT
+[0m01:04:19.363384 [debug] [MainThread]: SQL status: SUCCESS in 0.278 seconds
+[0m01:04:19.365254 [debug] [MainThread]: On master: Close
+[0m01:04:19.367487 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m01:04:19.368886 [debug] [MainThread]: Connection 'test.analytics_dbt.unique_my_second_dbt_model_id.57a0f8c493' was properly closed.
+[0m01:04:19.370404 [info ] [MainThread]: 
+[0m01:04:19.372032 [info ] [MainThread]: Finished running 11 data tests in 0 hours 0 minutes and 40.71 seconds (40.71s).
+[0m01:04:19.376503 [debug] [MainThread]: Command end result
+[0m01:04:19.481744 [info ] [MainThread]: 
+[0m01:04:19.483352 [info ] [MainThread]: [31mCompleted with 4 errors and 0 warnings:[0m
+[0m01:04:19.485081 [info ] [MainThread]: 
+[0m01:04:19.488290 [error] [MainThread]:   Compilation Error in test nao_negativo_tb_10_compradores_vendas_totais (models/example/schema.yml)
+  'test_nao_negativo' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m01:04:19.489972 [info ] [MainThread]: 
+[0m01:04:19.492489 [error] [MainThread]:   Compilation Error in test nao_negativo_vw_sales_comissao (models/example/schema.yml)
+  'test_nao_negativo' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m01:04:19.495068 [info ] [MainThread]: 
+[0m01:04:19.496858 [error] [MainThread]:   Compilation Error in test nao_negativo_vw_sales_valor_pago (models/example/schema.yml)
+  'test_nao_negativo' is undefined. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m01:04:19.498913 [info ] [MainThread]: 
+[0m01:04:19.501401 [error] [MainThread]: [31mFailure in test not_null_my_first_dbt_model_id (models/example/schema.yml)[0m
+[0m01:04:19.503711 [error] [MainThread]:   Got 1 result, configured to fail if != 0
+[0m01:04:19.505446 [info ] [MainThread]: 
+[0m01:04:19.508578 [info ] [MainThread]:   compiled code at target/compiled/analytics_dbt/models/example/schema.yml/not_null_my_first_dbt_model_id.sql
+[0m01:04:19.510809 [info ] [MainThread]: 
+[0m01:04:19.512805 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=4 SKIP=0 TOTAL=11
+[0m01:04:19.517494 [debug] [MainThread]: Resource report: {"command_name": "test", "command_wall_clock_time": 41.505054, "process_user_time": 2.139592, "process_kernel_time": 0.196387, "process_mem_max_rss": "112748", "process_in_blocks": "256", "command_success": false, "process_out_blocks": "0"}
+[0m01:04:19.519070 [debug] [MainThread]: Command `dbt test` failed at 01:04:19.518888 after 41.51 seconds
+[0m01:04:19.520037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe472b9a3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe46dbb8dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe46de97610>]}
+[0m01:04:19.521004 [debug] [MainThread]: Flushing usage events
+[0m01:04:34.711594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713fbb7370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713d2ce460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713d2ce8b0>]}
+
+
+============================== 01:04:34.715472 | 5ef5bd90-206f-4f32-af02-6e470d373382 ==============================
+[0m01:04:34.715472 [info ] [MainThread]: Running with dbt=1.8.7
+[0m01:04:34.716374 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/usr/app/analytics_dbt/analytics_edz_dbt/logs', 'profiles_dir': '/root/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt run', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m01:04:34.813203 [debug] [MainThread]: Redshift adapter: Setting redshift_connector to ERROR
+[0m01:04:34.814281 [debug] [MainThread]: Redshift adapter: Setting redshift_connector.core to ERROR
+[0m01:04:34.967843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5ef5bd90-206f-4f32-af02-6e470d373382', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713e9e75e0>]}
+[0m01:04:35.010462 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5ef5bd90-206f-4f32-af02-6e470d373382', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713d3ba580>]}
+[0m01:04:35.013164 [info ] [MainThread]: Registered adapter: redshift=1.8.1
+[0m01:04:35.038175 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m01:04:35.479595 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m01:04:35.480730 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m01:04:35.524847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5ef5bd90-206f-4f32-af02-6e470d373382', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713af66df0>]}
+[0m01:04:35.689589 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5ef5bd90-206f-4f32-af02-6e470d373382', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713af66c70>]}
+[0m01:04:35.691081 [info ] [MainThread]: Found 5 models, 11 data tests, 489 macros
+[0m01:04:35.692054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5ef5bd90-206f-4f32-af02-6e470d373382', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713e3cb640>]}
+[0m01:04:35.695632 [info ] [MainThread]: 
+[0m01:04:35.697454 [debug] [MainThread]: Acquiring new redshift connection 'master'
+[0m01:04:35.703836 [debug] [ThreadPool]: Acquiring new redshift connection 'list_dev'
+[0m01:04:35.725740 [debug] [ThreadPool]: Using redshift connection "list_dev"
+[0m01:04:35.727527 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "connection_name": "list_dev"} */
+
+    select distinct nspname from pg_namespace
+[0m01:04:35.729158 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:04:35.734566 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:04:35.736259 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:04:37.332352 [debug] [ThreadPool]: SQL status: SUCCESS in 1.604 seconds
+[0m01:04:37.334579 [debug] [ThreadPool]: On list_dev: Close
+[0m01:04:37.338489 [debug] [ThreadPool]: Acquiring new redshift connection 'list_dev_public'
+[0m01:04:37.346444 [debug] [ThreadPool]: Using redshift connection "list_dev_public"
+[0m01:04:37.347461 [debug] [ThreadPool]: On list_dev_public: BEGIN
+[0m01:04:37.348246 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m01:04:37.349330 [debug] [ThreadPool]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:04:37.350221 [debug] [ThreadPool]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:04:38.866361 [debug] [ThreadPool]: SQL status: SUCCESS in 1.518 seconds
+[0m01:04:38.867354 [debug] [ThreadPool]: Using redshift connection "list_dev_public"
+[0m01:04:38.868181 [debug] [ThreadPool]: On list_dev_public: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "connection_name": "list_dev_public"} */
+select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema,
+        'table' as type
+    from information_schema.tables
+    where table_schema ilike 'public'
+    and table_type = 'BASE TABLE'
+    union all
+    select
+      table_catalog as database,
+      table_name as name,
+      table_schema as schema,
+      case
+        when view_definition ilike '%create materialized view%'
+          then 'materialized_view'
+        else 'view'
+      end as type
+    from information_schema.views
+    where table_schema ilike 'public'
+[0m01:04:39.198493 [debug] [ThreadPool]: SQL status: SUCCESS in 0.329 seconds
+[0m01:04:39.202429 [debug] [ThreadPool]: On list_dev_public: ROLLBACK
+[0m01:04:39.491907 [debug] [ThreadPool]: On list_dev_public: Close
+[0m01:04:39.504211 [debug] [MainThread]: Using redshift connection "master"
+[0m01:04:39.505018 [debug] [MainThread]: On master: BEGIN
+[0m01:04:39.506045 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:04:39.507381 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:04:39.508155 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:04:41.072756 [debug] [MainThread]: SQL status: SUCCESS in 1.567 seconds
+[0m01:04:41.074526 [debug] [MainThread]: Using redshift connection "master"
+[0m01:04:41.075884 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "connection_name": "master"} */
+with
+    relation as (
+        select
+            pg_class.oid as relation_id,
+            pg_class.relname as relation_name,
+            pg_class.relnamespace as schema_id,
+            pg_namespace.nspname as schema_name,
+            pg_class.relkind as relation_type
+        from pg_class
+        join pg_namespace
+          on pg_class.relnamespace = pg_namespace.oid
+        where pg_namespace.nspname != 'information_schema'
+          and pg_namespace.nspname not like 'pg\_%'
+    ),
+    dependency as (
+        select distinct
+            coalesce(pg_rewrite.ev_class, pg_depend.objid) as dep_relation_id,
+            pg_depend.refobjid as ref_relation_id,
+            pg_depend.refclassid as ref_class_id
+        from pg_depend
+        left join pg_rewrite
+          on pg_depend.objid = pg_rewrite.oid
+        where coalesce(pg_rewrite.ev_class, pg_depend.objid) != pg_depend.refobjid
+    )
+
+select distinct
+    dep.schema_name as dependent_schema,
+    dep.relation_name as dependent_name,
+    ref.schema_name as referenced_schema,
+    ref.relation_name as referenced_name
+from dependency
+join relation ref
+    on dependency.ref_relation_id = ref.relation_id
+join relation dep
+    on dependency.dep_relation_id = dep.relation_id
+[0m01:04:41.424137 [debug] [MainThread]: SQL status: SUCCESS in 0.347 seconds
+[0m01:04:41.427862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5ef5bd90-206f-4f32-af02-6e470d373382', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713b1c4c70>]}
+[0m01:04:41.428909 [debug] [MainThread]: On master: ROLLBACK
+[0m01:04:41.846024 [debug] [MainThread]: Using redshift connection "master"
+[0m01:04:41.848025 [debug] [MainThread]: On master: BEGIN
+[0m01:04:41.993214 [debug] [MainThread]: SQL status: SUCCESS in 0.143 seconds
+[0m01:04:41.995436 [debug] [MainThread]: On master: COMMIT
+[0m01:04:41.997617 [debug] [MainThread]: Using redshift connection "master"
+[0m01:04:41.999129 [debug] [MainThread]: On master: COMMIT
+[0m01:04:42.327916 [debug] [MainThread]: SQL status: SUCCESS in 0.327 seconds
+[0m01:04:42.329276 [debug] [MainThread]: On master: Close
+[0m01:04:42.330606 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m01:04:42.331582 [info ] [MainThread]: 
+[0m01:04:42.337644 [debug] [Thread-1  ]: Began running node model.analytics_dbt.my_first_dbt_model
+[0m01:04:42.338652 [info ] [Thread-1  ]: 1 of 5 START sql table model public.my_first_dbt_model ......................... [RUN]
+[0m01:04:42.339614 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_dev_public, now model.analytics_dbt.my_first_dbt_model)
+[0m01:04:42.340609 [debug] [Thread-1  ]: Began compiling node model.analytics_dbt.my_first_dbt_model
+[0m01:04:42.345948 [debug] [Thread-1  ]: Writing injected SQL for node "model.analytics_dbt.my_first_dbt_model"
+[0m01:04:42.363157 [debug] [Thread-1  ]: Began executing node model.analytics_dbt.my_first_dbt_model
+[0m01:04:42.407176 [debug] [Thread-1  ]: Writing runtime sql for node "model.analytics_dbt.my_first_dbt_model"
+[0m01:04:42.425782 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m01:04:42.426722 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: BEGIN
+[0m01:04:42.427496 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:04:42.428445 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:04:42.429214 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:04:46.084530 [debug] [Thread-1  ]: SQL status: SUCCESS in 3.656 seconds
+[0m01:04:46.086582 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m01:04:46.087961 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_first_dbt_model"} */
+
+  
+    
+
+  create  table
+    "dev"."public"."my_first_dbt_model__dbt_tmp"
+    
+    
+    
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+[0m01:04:46.776739 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.688 seconds
+[0m01:04:46.787279 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m01:04:46.789638 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_first_dbt_model"} */
+alter table "dev"."public"."my_first_dbt_model" rename to "my_first_dbt_model__dbt_backup"
+[0m01:04:47.782058 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.991 seconds
+[0m01:04:47.789792 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m01:04:47.791014 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_first_dbt_model"} */
+alter table "dev"."public"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m01:04:49.058646 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.266 seconds
+[0m01:04:49.082832 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: COMMIT
+[0m01:04:49.084475 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m01:04:49.085704 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: COMMIT
+[0m01:04:50.469816 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.383 seconds
+[0m01:04:50.471319 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m01:04:50.472713 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: BEGIN
+[0m01:04:50.765974 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.291 seconds
+[0m01:04:50.775712 [debug] [Thread-1  ]: Applying DROP to: "dev"."public"."my_first_dbt_model__dbt_backup"
+[0m01:04:50.782632 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m01:04:50.784101 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_first_dbt_model"} */
+drop table if exists "dev"."public"."my_first_dbt_model__dbt_backup" cascade
+[0m01:04:51.066703 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.281 seconds
+[0m01:04:51.068928 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: COMMIT
+[0m01:04:51.069960 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m01:04:51.070794 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: COMMIT
+[0m01:04:51.861560 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.790 seconds
+[0m01:04:51.863730 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_first_dbt_model"
+[0m01:04:51.865194 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: BEGIN
+[0m01:04:52.014242 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.147 seconds
+[0m01:04:52.019415 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: ROLLBACK
+[0m01:04:52.315553 [debug] [Thread-1  ]: On model.analytics_dbt.my_first_dbt_model: Close
+[0m01:04:52.319345 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5ef5bd90-206f-4f32-af02-6e470d373382', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7139cb0c10>]}
+[0m01:04:52.320529 [info ] [Thread-1  ]: 1 of 5 OK created sql table model public.my_first_dbt_model .................... [[32mSUCCESS[0m in 9.98s]
+[0m01:04:52.321734 [debug] [Thread-1  ]: Finished running node model.analytics_dbt.my_first_dbt_model
+[0m01:04:52.322582 [debug] [Thread-1  ]: Began running node model.analytics_dbt.vw_sales
+[0m01:04:52.323546 [info ] [Thread-1  ]: 2 of 5 START sql view model public.vw_sales .................................... [RUN]
+[0m01:04:52.324739 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.analytics_dbt.my_first_dbt_model, now model.analytics_dbt.vw_sales)
+[0m01:04:52.325275 [debug] [Thread-1  ]: Began compiling node model.analytics_dbt.vw_sales
+[0m01:04:52.328096 [debug] [Thread-1  ]: Writing injected SQL for node "model.analytics_dbt.vw_sales"
+[0m01:04:52.344475 [debug] [Thread-1  ]: Began executing node model.analytics_dbt.vw_sales
+[0m01:04:52.365977 [debug] [Thread-1  ]: Writing runtime sql for node "model.analytics_dbt.vw_sales"
+[0m01:04:52.391677 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m01:04:52.392967 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: BEGIN
+[0m01:04:52.393987 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:04:52.395254 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:04:52.396007 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:04:54.094213 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.700 seconds
+[0m01:04:54.095944 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m01:04:54.097546 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.vw_sales"} */
+
+
+  create view "dev"."public"."vw_sales__dbt_tmp" as (
+    with source_sales as (
+    select *
+    from sales
+
+),
+
+renamed as (
+    select
+        SALESID AS ID_VENDA,
+        LISTID AS ID_LISTA,
+        SELLERID AS ID_VENDEDOR,
+        BUYERID AS ID_COMPRADOR,
+        EVENTID AS ID_EVENTO,
+        DATEID AS ID_DATE,
+        QTYSOLD AS QUANTIDADE_VENDIDA,
+        PRICEPAID AS VALOR_PAGO,
+        COMMISSION AS COMISSAO,
+        TO_CHAR(saletime, 'dd/mm/yyyy HH24:MI:SS') AS DATA_HORA_VENDA,
+        TO_CHAR(saletime, 'HH24:MI:SS') AS HORA_VENDA,
+        cast(saletime as date) AS DATA_VENDA
+
+  
+    FROM source_sales
+
+)
+
+select * from renamed
+  ) ;
+[0m01:04:55.652823 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.578 seconds
+[0m01:04:55.658653 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m01:04:55.660202 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.vw_sales"} */
+alter table "dev"."public"."vw_sales" rename to "vw_sales__dbt_backup"
+[0m01:04:56.094124 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.433 seconds
+[0m01:04:56.099303 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m01:04:56.100490 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.vw_sales"} */
+alter table "dev"."public"."vw_sales__dbt_tmp" rename to "vw_sales"
+[0m01:04:56.530159 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.428 seconds
+[0m01:04:56.533350 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: COMMIT
+[0m01:04:56.535135 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m01:04:56.536026 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: COMMIT
+[0m01:04:57.197645 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.660 seconds
+[0m01:04:57.198846 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m01:04:57.199662 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: BEGIN
+[0m01:04:57.524708 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.324 seconds
+[0m01:04:57.530330 [debug] [Thread-1  ]: Applying DROP to: "dev"."public"."vw_sales__dbt_backup"
+[0m01:04:57.533539 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m01:04:57.534864 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.vw_sales"} */
+drop view if exists "dev"."public"."vw_sales__dbt_backup" cascade
+[0m01:04:57.828605 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.292 seconds
+[0m01:04:57.830361 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: COMMIT
+[0m01:04:57.832016 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m01:04:57.833378 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: COMMIT
+[0m01:04:58.286251 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.452 seconds
+[0m01:04:58.288123 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.vw_sales"
+[0m01:04:58.289082 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: BEGIN
+[0m01:04:58.444175 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.154 seconds
+[0m01:04:58.446280 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: ROLLBACK
+[0m01:04:58.746254 [debug] [Thread-1  ]: On model.analytics_dbt.vw_sales: Close
+[0m01:04:58.747856 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5ef5bd90-206f-4f32-af02-6e470d373382', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7139cb07c0>]}
+[0m01:04:58.749370 [info ] [Thread-1  ]: 2 of 5 OK created sql view model public.vw_sales ............................... [[32mSUCCESS[0m in 6.42s]
+[0m01:04:58.750658 [debug] [Thread-1  ]: Finished running node model.analytics_dbt.vw_sales
+[0m01:04:58.751705 [debug] [Thread-1  ]: Began running node model.analytics_dbt.my_second_dbt_model
+[0m01:04:58.752825 [info ] [Thread-1  ]: 3 of 5 START sql view model public.my_second_dbt_model ......................... [RUN]
+[0m01:04:58.753942 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.analytics_dbt.vw_sales, now model.analytics_dbt.my_second_dbt_model)
+[0m01:04:58.754819 [debug] [Thread-1  ]: Began compiling node model.analytics_dbt.my_second_dbt_model
+[0m01:04:58.760433 [debug] [Thread-1  ]: Writing injected SQL for node "model.analytics_dbt.my_second_dbt_model"
+[0m01:04:58.778685 [debug] [Thread-1  ]: Began executing node model.analytics_dbt.my_second_dbt_model
+[0m01:04:58.840001 [debug] [Thread-1  ]: Writing runtime sql for node "model.analytics_dbt.my_second_dbt_model"
+[0m01:04:58.859743 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m01:04:58.861030 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: BEGIN
+[0m01:04:58.861975 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:04:58.862989 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:04:58.863905 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:05:00.437808 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.576 seconds
+[0m01:05:00.439534 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m01:05:00.440931 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_second_dbt_model"} */
+
+
+  create view "dev"."public"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "dev"."public"."my_first_dbt_model"
+where id = 1
+  ) ;
+[0m01:05:01.025030 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.583 seconds
+[0m01:05:01.029861 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m01:05:01.031092 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_second_dbt_model"} */
+alter table "dev"."public"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m01:05:01.546725 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.514 seconds
+[0m01:05:01.549820 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: COMMIT
+[0m01:05:01.551400 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m01:05:01.552595 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: COMMIT
+[0m01:05:02.724175 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.170 seconds
+[0m01:05:02.726677 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m01:05:02.728037 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: BEGIN
+[0m01:05:03.219633 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.490 seconds
+[0m01:05:03.222913 [debug] [Thread-1  ]: Applying DROP to: "dev"."public"."my_second_dbt_model__dbt_backup"
+[0m01:05:03.224428 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m01:05:03.225408 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.my_second_dbt_model"} */
+drop view if exists "dev"."public"."my_second_dbt_model__dbt_backup" cascade
+[0m01:05:04.410773 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.184 seconds
+[0m01:05:04.414372 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: COMMIT
+[0m01:05:04.415713 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m01:05:04.416919 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: COMMIT
+[0m01:05:04.606728 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.189 seconds
+[0m01:05:04.608072 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.my_second_dbt_model"
+[0m01:05:04.609318 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: BEGIN
+[0m01:05:04.805495 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.195 seconds
+[0m01:05:04.808604 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: ROLLBACK
+[0m01:05:05.201658 [debug] [Thread-1  ]: On model.analytics_dbt.my_second_dbt_model: Close
+[0m01:05:05.204119 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5ef5bd90-206f-4f32-af02-6e470d373382', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7138be56d0>]}
+[0m01:05:05.205925 [info ] [Thread-1  ]: 3 of 5 OK created sql view model public.my_second_dbt_model .................... [[32mSUCCESS[0m in 6.45s]
+[0m01:05:05.207233 [debug] [Thread-1  ]: Finished running node model.analytics_dbt.my_second_dbt_model
+[0m01:05:05.208065 [debug] [Thread-1  ]: Began running node model.analytics_dbt.tb_10_compradores
+[0m01:05:05.209171 [info ] [Thread-1  ]: 4 of 5 START sql table model public.tb_10_compradores .......................... [RUN]
+[0m01:05:05.209904 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.analytics_dbt.my_second_dbt_model, now model.analytics_dbt.tb_10_compradores)
+[0m01:05:05.210863 [debug] [Thread-1  ]: Began compiling node model.analytics_dbt.tb_10_compradores
+[0m01:05:05.214413 [debug] [Thread-1  ]: Writing injected SQL for node "model.analytics_dbt.tb_10_compradores"
+[0m01:05:05.226745 [debug] [Thread-1  ]: Began executing node model.analytics_dbt.tb_10_compradores
+[0m01:05:05.231310 [debug] [Thread-1  ]: Writing runtime sql for node "model.analytics_dbt.tb_10_compradores"
+[0m01:05:05.248931 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m01:05:05.249824 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: BEGIN
+[0m01:05:05.251030 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:05:05.252434 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:05:05.253288 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:05:08.783523 [debug] [Thread-1  ]: SQL status: SUCCESS in 3.533 seconds
+[0m01:05:08.785042 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m01:05:08.786027 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_10_compradores"} */
+
+  
+    
+
+  create  table
+    "dev"."public"."tb_10_compradores__dbt_tmp"
+    
+    
+    
+  as (
+    with sales as (
+
+    select * from "dev"."public"."vw_sales"
+
+),
+compradores as (
+
+    SELECT
+        (firstname ||' '|| lastname) as Nome_Completo, userid
+    FROM users
+),
+
+top_10_compradores as (
+
+    SELECT
+        compradores.Nome_Completo as Nome_Completo,
+        sum(sales.quantidade_vendida) as Vendas_totais,
+        sales.comissao as Comissao
+    FROM sales INNER JOIN compradores
+    ON sales.id_comprador = compradores.userid
+    GROUP BY compradores.userid, compradores.Nome_Completo, sales.comissao
+    ORDER BY Vendas_totais DESC
+    LIMIT 10
+
+)
+
+select * from top_10_compradores
+  );
+[0m01:05:09.209842 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.423 seconds
+[0m01:05:09.217010 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m01:05:09.218587 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_10_compradores"} */
+alter table "dev"."public"."tb_10_compradores" rename to "tb_10_compradores__dbt_backup"
+[0m01:05:09.810209 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.590 seconds
+[0m01:05:09.815043 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m01:05:09.816248 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_10_compradores"} */
+alter table "dev"."public"."tb_10_compradores__dbt_tmp" rename to "tb_10_compradores"
+[0m01:05:10.277599 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.460 seconds
+[0m01:05:10.280282 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: COMMIT
+[0m01:05:10.281651 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m01:05:10.282674 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: COMMIT
+[0m01:05:11.031155 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.747 seconds
+[0m01:05:11.032539 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m01:05:11.033562 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: BEGIN
+[0m01:05:11.322783 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.288 seconds
+[0m01:05:11.328213 [debug] [Thread-1  ]: Applying DROP to: "dev"."public"."tb_10_compradores__dbt_backup"
+[0m01:05:11.329861 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m01:05:11.330908 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_10_compradores"} */
+drop table if exists "dev"."public"."tb_10_compradores__dbt_backup" cascade
+[0m01:05:11.620507 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.288 seconds
+[0m01:05:11.623800 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: COMMIT
+[0m01:05:11.625217 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m01:05:11.626155 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: COMMIT
+[0m01:05:12.103789 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.477 seconds
+[0m01:05:12.105666 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_10_compradores"
+[0m01:05:12.107114 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: BEGIN
+[0m01:05:12.252523 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.144 seconds
+[0m01:05:12.254970 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: ROLLBACK
+[0m01:05:12.546388 [debug] [Thread-1  ]: On model.analytics_dbt.tb_10_compradores: Close
+[0m01:05:12.548233 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5ef5bd90-206f-4f32-af02-6e470d373382', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7139cb0820>]}
+[0m01:05:12.549486 [info ] [Thread-1  ]: 4 of 5 OK created sql table model public.tb_10_compradores ..................... [[32mSUCCESS[0m in 7.34s]
+[0m01:05:12.550722 [debug] [Thread-1  ]: Finished running node model.analytics_dbt.tb_10_compradores
+[0m01:05:12.551618 [debug] [Thread-1  ]: Began running node model.analytics_dbt.tb_vendas_primeiro_trimestre
+[0m01:05:12.552542 [info ] [Thread-1  ]: 5 of 5 START sql table model public.tb_vendas_primeiro_trimestre ............... [RUN]
+[0m01:05:12.553373 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.analytics_dbt.tb_10_compradores, now model.analytics_dbt.tb_vendas_primeiro_trimestre)
+[0m01:05:12.554418 [debug] [Thread-1  ]: Began compiling node model.analytics_dbt.tb_vendas_primeiro_trimestre
+[0m01:05:12.558761 [debug] [Thread-1  ]: Writing injected SQL for node "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m01:05:12.570081 [debug] [Thread-1  ]: Began executing node model.analytics_dbt.tb_vendas_primeiro_trimestre
+[0m01:05:12.574971 [debug] [Thread-1  ]: Writing runtime sql for node "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m01:05:12.598506 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m01:05:12.599723 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: BEGIN
+[0m01:05:12.600817 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m01:05:12.601984 [debug] [Thread-1  ]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:05:12.602950 [debug] [Thread-1  ]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:05:14.254671 [debug] [Thread-1  ]: SQL status: SUCCESS in 1.654 seconds
+[0m01:05:14.256082 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m01:05:14.257327 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_vendas_primeiro_trimestre"} */
+
+  
+    
+
+  create  table
+    "dev"."public"."tb_vendas_primeiro_trimestre__dbt_tmp"
+    
+    
+    
+  as (
+    -- define o as variáveis meses e ano
+
+
+
+-- cria a fonte com os dados de date e converte o  nome das colunas
+with source_date as (
+    select  dateid as id_date,
+            month as mes,
+            year as ano
+    from date
+
+),
+-- cria uma fonte de dados unindo a tabela sales com date
+sales_date as (
+
+    select  source_date.mes, 
+            sum(quantidade_vendida)
+    from  "dev"."public"."vw_sales" sales inner join source_date
+    on sales.id_date = source_date.id_date
+    where source_date.mes in ('JAN', 'FEB', 'MAR')
+    and source_date.ano = '2008'
+    group by source_date.mes
+)
+select * from sales_date
+  );
+[0m01:05:14.629174 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.370 seconds
+[0m01:05:14.634095 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m01:05:14.635539 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_vendas_primeiro_trimestre"} */
+alter table "dev"."public"."tb_vendas_primeiro_trimestre" rename to "tb_vendas_primeiro_trimestre__dbt_backup"
+[0m01:05:15.197131 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.561 seconds
+[0m01:05:15.202719 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m01:05:15.203887 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_vendas_primeiro_trimestre"} */
+alter table "dev"."public"."tb_vendas_primeiro_trimestre__dbt_tmp" rename to "tb_vendas_primeiro_trimestre"
+[0m01:05:15.630866 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.426 seconds
+[0m01:05:15.635964 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: COMMIT
+[0m01:05:15.637593 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m01:05:15.639015 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: COMMIT
+[0m01:05:16.366656 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.726 seconds
+[0m01:05:16.368342 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m01:05:16.369632 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: BEGIN
+[0m01:05:16.654619 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.283 seconds
+[0m01:05:16.658256 [debug] [Thread-1  ]: Applying DROP to: "dev"."public"."tb_vendas_primeiro_trimestre__dbt_backup"
+[0m01:05:16.659927 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m01:05:16.661053 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "analytics_dbt", "target_name": "dev", "node_id": "model.analytics_dbt.tb_vendas_primeiro_trimestre"} */
+drop table if exists "dev"."public"."tb_vendas_primeiro_trimestre__dbt_backup" cascade
+[0m01:05:16.940706 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.278 seconds
+[0m01:05:16.942781 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: COMMIT
+[0m01:05:16.944107 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m01:05:16.945062 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: COMMIT
+[0m01:05:17.495683 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.550 seconds
+[0m01:05:17.497977 [debug] [Thread-1  ]: Using redshift connection "model.analytics_dbt.tb_vendas_primeiro_trimestre"
+[0m01:05:17.499399 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: BEGIN
+[0m01:05:17.638684 [debug] [Thread-1  ]: SQL status: SUCCESS in 0.138 seconds
+[0m01:05:17.640092 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: ROLLBACK
+[0m01:05:17.929156 [debug] [Thread-1  ]: On model.analytics_dbt.tb_vendas_primeiro_trimestre: Close
+[0m01:05:17.930838 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5ef5bd90-206f-4f32-af02-6e470d373382', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7138c01280>]}
+[0m01:05:17.932095 [info ] [Thread-1  ]: 5 of 5 OK created sql table model public.tb_vendas_primeiro_trimestre .......... [[32mSUCCESS[0m in 5.38s]
+[0m01:05:17.933893 [debug] [Thread-1  ]: Finished running node model.analytics_dbt.tb_vendas_primeiro_trimestre
+[0m01:05:17.937397 [debug] [MainThread]: Using redshift connection "master"
+[0m01:05:17.938254 [debug] [MainThread]: On master: BEGIN
+[0m01:05:17.938955 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m01:05:17.939772 [debug] [MainThread]: Redshift adapter: Establishing connection using ssl with `sslmode` set to 'prefer'.To connect without ssl, set `sslmode` to 'disable'.
+[0m01:05:17.940592 [debug] [MainThread]: Redshift adapter: Connecting to redshift with username/password based auth...
+[0m01:05:21.757838 [debug] [MainThread]: SQL status: SUCCESS in 3.819 seconds
+[0m01:05:21.759852 [debug] [MainThread]: On master: COMMIT
+[0m01:05:21.761282 [debug] [MainThread]: Using redshift connection "master"
+[0m01:05:21.762382 [debug] [MainThread]: On master: COMMIT
+[0m01:05:22.835465 [debug] [MainThread]: SQL status: SUCCESS in 1.072 seconds
+[0m01:05:22.837237 [debug] [MainThread]: On master: Close
+[0m01:05:22.838630 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m01:05:22.839760 [debug] [MainThread]: Connection 'list_dev' was properly closed.
+[0m01:05:22.840551 [debug] [MainThread]: Connection 'model.analytics_dbt.tb_vendas_primeiro_trimestre' was properly closed.
+[0m01:05:22.841575 [info ] [MainThread]: 
+[0m01:05:22.842421 [info ] [MainThread]: Finished running 3 table models, 2 view models in 0 hours 0 minutes and 47.14 seconds (47.14s).
+[0m01:05:22.844977 [debug] [MainThread]: Command end result
+[0m01:05:22.943519 [info ] [MainThread]: 
+[0m01:05:22.945033 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m01:05:22.947171 [info ] [MainThread]: 
+[0m01:05:22.949165 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[0m01:05:22.953272 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 47.34027, "process_user_time": 2.234343, "process_kernel_time": 0.212794, "process_mem_max_rss": "105836", "process_in_blocks": "81920", "process_out_blocks": "0"}
+[0m01:05:22.955549 [debug] [MainThread]: Command `dbt run` succeeded at 01:05:22.955284 after 47.34 seconds
+[0m01:05:22.956642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713fbb7370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713dea6bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f713e856a30>]}
+[0m01:05:22.957797 [debug] [MainThread]: Flushing usage events
